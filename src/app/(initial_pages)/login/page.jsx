@@ -1,9 +1,19 @@
+'use client'
+
 import Image from "next/image";
 import Form from "@/app/components/form";
 import login from "@/app/lib/services/login";
-// import {useEffect} from "react";
 
-export default async function LoginPage() {
+
+
+export default  function LoginPage() {
+
+
+    async function handleLogin() {
+        const fetchLogin = await login()
+        console.log(fetchLogin)
+    }
+
 
     return (
         <main className="h-screen w-screen flex flex-col items-center px-8 py-10 lg:flex-row-reverse lg:py-0 lg:px-0">
@@ -48,13 +58,16 @@ export default async function LoginPage() {
 
                 <div className="w-full flex flex-col gap-5">
 
-                    <button className="w-full bg-primary py-3 rounded-2xl text-white font-medium text-sm lg:text-lg">Masuk
+                    <button onClick={handleLogin} className="w-full bg-primary py-3 rounded-2xl text-white font-medium text-sm lg:text-lg">Masuk
                     </button>
 
-                    <div className="w-full py-3 relative">
-                        <Image className="absolute py-3 ms-5 lg:ms-10 lg:py-4" src='/icon/icon_google.svg' alt="Icon Google" height={20} width={20}/>
-                        <button className="w-full border border-[#8D8D8D] py-3 rounded-2xl text-textPrimary font-medium text-sm lg:text-lg">Masuk
-                            dengan Google
+                    <div className="w-full py-3">
+
+                        <button className="w-full border border-[#8D8D8D] py-3 rounded-2xl text-textPrimary font-medium text-sm flex justify-center lg:text-lg">
+                            <div className="flex">
+                                <Image className="me-4 " src='/icon/icon_google.svg' alt="Icon Google" height={20} width={20}/>
+                                <h3 className="text-textPrimary text-sm lg:text-lg text-center">Masuk dengan Google</h3>
+                            </div>
                         </button>
                     </div>
 
