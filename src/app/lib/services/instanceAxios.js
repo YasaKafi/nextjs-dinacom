@@ -1,10 +1,12 @@
-import axios from 'axios';
+const baseUrl = 'https://0214-180-253-77-75.ngrok-free.app/api';
 
-const instance = axios.create({
-    baseURL: 'https://api.example.com',
-    headers: {
-        'Content-Type': 'application/json',
-    },
-});
+const headers = {
+    'Content-Type': 'application/json',
+};
 
-export default instance;
+
+export const instance = {
+    baseUrl,
+    headers,
+
+};
