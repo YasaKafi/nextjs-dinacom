@@ -1,11 +1,8 @@
 import instanceAxios from "@/app/lib/services/instanceAxios";
 
-export default async function login({email, password}) {
+export default async function login(body) {
     try {
-        const res = await instanceAxios.post('/login', {
-            email: email,
-            password: password,
-        })
+        const res = await instanceAxios.post('/login', body)
 
         return res.data
     } catch (error) {

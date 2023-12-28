@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const instance = axios.create({
-    baseURL: 'https://api.example.com',
+    baseURL: 'https://zell-dinacom.000webhostapp.com/api',
     headers: {
         'Content-Type': 'application/json',
     },
