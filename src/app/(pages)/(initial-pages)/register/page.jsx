@@ -1,7 +1,7 @@
 import React from "react";
 import { registerIllustration, smarthomeLogo } from "@/app/lib/utils/images";
 import Image from "next/image";
-import Form from "@/app/components/form";
+import FormLayout from "@/app/components/form-layout.js";
 
 export default function RegisterPage() {
   return (
@@ -17,7 +17,7 @@ export default function RegisterPage() {
             </h2>
             <Image src={smarthomeLogo} alt="SmartCarrier Logo" />
           </div>
-          <Form />
+          <FormLayout />
         </div>
       </div>
     </main>

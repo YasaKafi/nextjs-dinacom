@@ -122,6 +122,7 @@ function SliderTestimony() {
                         {
                             data.map((item, index) => (
                                 <div
+                                    key={item.id}
                                     className={` h-[10px] rounded-full ${currentSlide === index ? 'bg-primary w-[25px]' : 'bg-[#DDDDDD] w-[10px]'}`}/>
 
                             ))

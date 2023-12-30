@@ -16,7 +16,7 @@ import iconPhone from '@/app/lib/assets/svg/icon-phone.svg'
 import iconTwitter from '@/app/lib/assets/svg/icon-twitter.svg'
 import iconLocation from '@/app/lib/assets/svg/icon-location.svg'
 
-export {
+ export  {
     iconGoogle,
     brainDecoration,
     iconCheck,

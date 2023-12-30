@@ -6,7 +6,7 @@ import { iconGoogle } from "@/app/lib/utils/icon";
 import { IoIosEye, IoIosEyeOff } from "react-icons/io";
 import Image from "next/image";
 
-function Form() {
+function FormLayout() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -172,4 +172,4 @@ function Form() {
   );
 }
 
-export default Form;
+export default FormLayout;
