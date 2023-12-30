@@ -15,8 +15,16 @@ import iconMail from '@/app/lib/assets/svg/icon-mail.svg'
 import iconPhone from '@/app/lib/assets/svg/icon-phone.svg'
 import iconTwitter from '@/app/lib/assets/svg/icon-twitter.svg'
 import iconLocation from '@/app/lib/assets/svg/icon-location.svg'
+import iconEdit from '@/app/lib/assets/svg/icon-edit.svg'
+import iconFacebookWhite from '@/app/lib/assets/svg/icon-facebook-white.svg'
+import iconInstagramWhite from '@/app/lib/assets/svg/icon-instagram-white.svg'
+import iconTwitterWhite from '@/app/lib/assets/svg/icon-twitter-white.svg'
+import iconHamburger from '@/app/lib/assets/svg/icon-hamburger.svg'
+import iconExit from '@/app/lib/assets/svg/icon-exit.svg'
 
-export {
+
+
+ export  {
     iconGoogle,
     brainDecoration,
     iconCheck,
@@ -33,6 +41,12 @@ export {
     iconMail,
     iconPhone,
     iconTwitter,
-    iconLocation
+    iconLocation,
+    iconEdit,
+    iconFacebookWhite,
+    iconInstagramWhite,
+    iconTwitterWhite,
+    iconHamburger,
+    iconExit
 
 }

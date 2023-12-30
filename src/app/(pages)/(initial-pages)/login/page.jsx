@@ -1,19 +1,18 @@
 
-'use client'
-
 import Image from "next/image";
-import Form from "@/app/components/form";
+import Form from "@/app/(pages)/(initial-pages)/components/form";
 import login from "@/app/lib/services/login";
+import icons, {iconGoogle} from "@/app/lib/utils/icon";
 
 
 
 export default  function LoginPage() {
-
-
-    async function handleLogin() {
-        const fetchLogin = await login()
-        console.log(fetchLogin)
-    }
+    //
+    //
+    // async function handleLogin() {
+    //     const fetchLogin = await login()
+    //     console.log(fetchLogin)
+    // }
 
 
     return (
@@ -59,14 +58,14 @@ export default  function LoginPage() {
 
                 <div className="w-full flex flex-col gap-5">
 
-                    <button onClick={handleLogin} className="w-full bg-primary py-3 rounded-2xl text-white font-medium text-sm lg:text-lg">Masuk
+                    <button  className="w-full bg-primary py-3 rounded-2xl text-white font-medium text-sm lg:text-lg">Masuk
                     </button>
 
                     <div className="w-full py-3">
 
                         <button className="w-full border border-[#8D8D8D] py-3 rounded-2xl text-textPrimary font-medium text-sm flex justify-center lg:text-lg">
                             <div className="flex">
-                                <Image className="me-4 " src='/icon/icon_google.svg' alt="Icon Google" height={20} width={20}/>
+                                <Image className="me-4 " src={iconGoogle} alt="Icon Google" height={20} width={20}/>
                                 <h3 className="text-textPrimary text-sm lg:text-lg text-center">Masuk dengan Google</h3>
                             </div>
                         </button>
