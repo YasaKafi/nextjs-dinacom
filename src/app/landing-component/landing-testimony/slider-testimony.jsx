@@ -84,7 +84,7 @@ function SliderTestimony() {
 
     return (
         <div className="flex justify-center mt-20">
-            <div className="w-3/4">
+            <div className="w-full">
                 <Slider ref={sliderRef} {...settings}>
                     {data.map((item, index) => (
                             <div key={item.id}
@@ -112,12 +112,12 @@ function SliderTestimony() {
                                 </p>
 
                             </div>
-                        )
-                    )
+                        ))
                     }
                 </Slider>
 
                 <div className="flex justify-between items-center ps-2 mt-10">
+
                     <div className="flex gap-2">
                         {
                             data.map((item, index) => (
@@ -131,7 +131,7 @@ function SliderTestimony() {
                     <div className="flex gap-3">
 
                         <div onClick={previous}
-                             className="w-[50px] h-[50px] border border-primary hover:bg-primary hover:shadow-md hover:shadow-[#98D6F9] group transition ease-out duration-100  rounded-full flex items-center justify-center">
+                             className="button-slide group">
                             <svg width="25" height="25" viewBox="0 0 30 30" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -143,7 +143,7 @@ function SliderTestimony() {
                         </div>
 
                         <div onClick={next}
-                             className="w-[50px] h-[50px] border border-primary hover:bg-primary hover:shadow-md hover:shadow-[#98D6F9] group transition ease-out duration-100  rounded-full flex items-center justify-center">
+                             className="button-slide group">
                             <svg width="25" height="25" viewBox="0 0 30 30" fill="none" className="rotate-180"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -154,6 +154,7 @@ function SliderTestimony() {
                         </div>
 
                     </div>
+
                 </div>
             </div>
         </div>

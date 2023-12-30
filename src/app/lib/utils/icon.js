@@ -8,6 +8,7 @@ import iconGlobe from '@/app/lib/assets/svg/icon-globe.svg'
 import iconStar from '@/app/lib/assets/svg/icon-star.svg'
 import arrowWhite from '@/app/lib/assets/svg/arrow-white.svg'
 import arrowPrimary from '@/app/lib/assets/svg/arrow-primary.svg'
+import landingTestimonyDecoration from '@/app/lib/assets/svg/landing-testimony-decoration.svg'
 
 export {
     iconGoogle,
@@ -19,5 +20,6 @@ export {
     iconGlobe,
     iconStar,
     arrowWhite,
-    arrowPrimary
+    arrowPrimary,
+    landingTestimonyDecoration
 }
