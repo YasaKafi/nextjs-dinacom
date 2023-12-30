@@ -1,9 +1,11 @@
-import LandingHeroComponent from "@/app/landing-component/landing-hero-component";
+import LandingHero from "@/app/landing-component/landing-hero";
+import LandingFeature from "@/app/landing-component/landing-feature";
 
 export default function Home() {
   return (
     <>
-      <LandingHeroComponent/>
+      <LandingHero/>
+      <LandingFeature/>
     </>
   )
 }

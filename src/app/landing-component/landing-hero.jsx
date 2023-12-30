@@ -2,7 +2,7 @@ import Image from "next/image";
 import {landingHeroImage} from "@/app/lib/utils/images";
 import {brainDecoration} from "@/app/lib/utils/icon";
 
-function LandingHeroComponent() {
+function LandingHero() {
     return (
         <div className="h-screen w-screen bg-white lg:px-[50px] lg:py-[100px]">
             <div className="flex w-full h-full">
@@ -44,4 +44,4 @@ function LandingHeroComponent() {
     );
 }
 
-export default LandingHeroComponent;
+export default LandingHero;
