@@ -16,6 +16,9 @@ import iconPhone from '@/app/lib/assets/svg/icon-phone.svg'
 import iconTwitter from '@/app/lib/assets/svg/icon-twitter.svg'
 import iconLocation from '@/app/lib/assets/svg/icon-location.svg'
 import iconEdit from '@/app/lib/assets/svg/icon-edit.svg'
+import iconFacebookWhite from '@/app/lib/assets/svg/icon-facebook-white.svg'
+import iconInstagramWhite from '@/app/lib/assets/svg/icon-instagram-white.svg'
+import iconTwitterWhite from '@/app/lib/assets/svg/icon-twitter-white.svg'
 
 
  export  {
@@ -36,6 +39,8 @@ import iconEdit from '@/app/lib/assets/svg/icon-edit.svg'
     iconPhone,
     iconTwitter,
     iconLocation,
-    iconEdit
-
+    iconEdit,
+    iconFacebookWhite,
+    iconInstagramWhite,
+    iconTwitterWhite,
 }
