@@ -5,6 +5,9 @@ import landingFeatIllustration from '../assets/image/landing-feat-illustration.p
 import landingSmartcarrierImage from '../assets/image/landing-smartcarrier-image.png'
 import userTestimony from '../assets/image/user-testimony.png'
 import googleMap from '../assets/image/map.png'
+import registerIllustration from '../assets/image/register-illustration.png'
+import smarthomeLogo from '../assets/image/smarthome-logo.png'
+
 
 export {
     logo,
@@ -13,5 +16,7 @@ export {
     landingFeatIllustration,
     landingSmartcarrierImage,
     userTestimony,
-    googleMap
+    googleMap,
+    registerIllustration,
+    smarthomeLogo
 }

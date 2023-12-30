@@ -36,7 +36,7 @@ function SliderTestimony() {
             rating: '4,5'
         },
         {
-            id: 3,
+            id: 4,
             name: 'Kim Young Jou',
             place: 'Seoul, South Korea',
             description: 'Saya Sangat Senang',
@@ -44,7 +44,7 @@ function SliderTestimony() {
             rating: '4,5'
         },
         {
-            id: 3,
+            id: 5,
             name: 'Kim Young Jou',
             place: 'Seoul, South Korea',
             description: 'Saya Sangat Senang',

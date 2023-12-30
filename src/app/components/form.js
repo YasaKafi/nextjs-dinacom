@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import register from "@/app/lib/services/register";
-import { googleIcon } from "@/app/lib/utils/icon";
+import { iconGoogle } from "@/app/lib/utils/icon";
 import { IoIosEye, IoIosEyeOff } from "react-icons/io";
 import Image from "next/image";
 
@@ -156,7 +156,7 @@ function Form() {
           </button>
           <button className="w-full py-3  flex flex-row  items-center justify-center rounded-2xl bg-white border-2 border-black text-black">
             <div className="mr-4">
-              <Image src={googleIcon} alt="" />
+              <Image src={iconGoogle} alt="Icon Google" />
             </div>
             <h2>Daftar Dengan Google</h2>
           </button>
