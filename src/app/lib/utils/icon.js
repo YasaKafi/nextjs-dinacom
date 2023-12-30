@@ -19,6 +19,9 @@ import iconEdit from '@/app/lib/assets/svg/icon-edit.svg'
 import iconFacebookWhite from '@/app/lib/assets/svg/icon-facebook-white.svg'
 import iconInstagramWhite from '@/app/lib/assets/svg/icon-instagram-white.svg'
 import iconTwitterWhite from '@/app/lib/assets/svg/icon-twitter-white.svg'
+import iconHamburger from '@/app/lib/assets/svg/icon-hamburger.svg'
+import iconExit from '@/app/lib/assets/svg/icon-exit.svg'
+
 
 
  export  {
@@ -43,4 +46,7 @@ import iconTwitterWhite from '@/app/lib/assets/svg/icon-twitter-white.svg'
     iconFacebookWhite,
     iconInstagramWhite,
     iconTwitterWhite,
+    iconHamburger,
+    iconExit
+
 }

@@ -65,7 +65,7 @@ export default  function LoginPage() {
 
                         <button className="w-full border border-[#8D8D8D] py-3 rounded-2xl text-textPrimary font-medium text-sm flex justify-center lg:text-lg">
                             <div className="flex">
-                                <Image className="me-4 " src={icons.iconGoogle} alt="Icon Google" height={20} width={20}/>
+                                <Image className="me-4 " src={iconGoogle} alt="Icon Google" height={20} width={20}/>
                                 <h3 className="text-textPrimary text-sm lg:text-lg text-center">Masuk dengan Google</h3>
                             </div>
                         </button>
