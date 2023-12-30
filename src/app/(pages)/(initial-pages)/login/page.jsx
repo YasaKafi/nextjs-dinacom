@@ -1,6 +1,6 @@
 
 import Image from "next/image";
-import Form from "@/app/components/form";
+import Form from "@/app/(pages)/(initial-pages)/components/form";
 import login from "@/app/lib/services/login";
 import icons, {iconGoogle} from "@/app/lib/utils/icon";
 

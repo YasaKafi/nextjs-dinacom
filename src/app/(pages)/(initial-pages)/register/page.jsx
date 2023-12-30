@@ -1,7 +1,7 @@
 import React from "react";
 import { registerIllustration, smarthomeLogo } from "@/app/lib/utils/images";
 import Image from "next/image";
-import FormLayout from "@/app/components/form-layout.js";
+import FormLayout from "@/app/(pages)/(initial-pages)/components/form-layout.js";
 
 export default function RegisterPage() {
   return (

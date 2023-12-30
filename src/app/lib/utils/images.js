@@ -7,7 +7,7 @@ import userTestimony from '../assets/image/user-testimony.png'
 import googleMap from '../assets/image/map.png'
 import registerIllustration from '../assets/image/register-illustration.png'
 import smarthomeLogo from '../assets/image/smarthome-logo.png'
-
+import userProfile from '../assets/image/user-profile.png'
 
 export {
     logo,
@@ -18,5 +18,6 @@ export {
     userTestimony,
     googleMap,
     registerIllustration,
-    smarthomeLogo
+    smarthomeLogo,
+    userProfile
 }
