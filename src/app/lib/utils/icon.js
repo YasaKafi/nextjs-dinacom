@@ -9,6 +9,12 @@ import iconStar from '@/app/lib/assets/svg/icon-star.svg'
 import arrowWhite from '@/app/lib/assets/svg/arrow-white.svg'
 import arrowPrimary from '@/app/lib/assets/svg/arrow-primary.svg'
 import landingTestimonyDecoration from '@/app/lib/assets/svg/landing-testimony-decoration.svg'
+import iconFacebook from '@/app/lib/assets/svg/icon-facebook.svg'
+import iconLinkedin from '@/app/lib/assets/svg/icon-linkedin.svg'
+import iconMail from '@/app/lib/assets/svg/icon-mail.svg'
+import iconPhone from '@/app/lib/assets/svg/icon-phone.svg'
+import iconTwitter from '@/app/lib/assets/svg/icon-twitter.svg'
+import iconLocation from '@/app/lib/assets/svg/icon-location.svg'
 
 export {
     iconGoogle,
@@ -21,5 +27,12 @@ export {
     iconStar,
     arrowWhite,
     arrowPrimary,
-    landingTestimonyDecoration
+    landingTestimonyDecoration,
+    iconFacebook,
+    iconLinkedin,
+    iconMail,
+    iconPhone,
+    iconTwitter,
+    iconLocation
+
 }
