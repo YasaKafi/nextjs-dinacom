@@ -1,11 +1,28 @@
-import registerIlustration from '../../../../public/assets/image/registerIlustration.png';
-import smartHomeLogo from '../../../../public/assets/image/SmartHomeLogo.png';
-import avatarUser from '../../../../public/assets/image/avatarUser.png';
+import logo from '../assets/image/logo.png'
+import registerImage from '../assets/image/register-image.png'
+import landingHeroImage from '../assets/image/landing-hero-image.png'
+import landingFeatIllustration from '../assets/image/landing-feat-illustration.png'
+import landingSmartcarrierImage from '../assets/image/landing-smartcarrier-image.png'
+import userTestimony from '../assets/image/user-testimony.png'
+import googleMap from '../assets/image/map.png'
+import registerIllustration from '../assets/image/register-illustration.png'
+import smarthomeLogo from '../assets/image/smarthome-logo.png'
+import userProfile from '../assets/image/user-profile.png'
+import userProfileNavbar from '../assets/image/user-profile-navbar.png'import avatarUser from '../../../../public/assets/image/avatarUser.png';
 import coursesWork from '../../../../public/assets/image/coursesWork.png';
 
 export {
-    registerIlustration,
-    smartHomeLogo,
+    logo,
+    registerImage,
+    landingHeroImage,
+    landingFeatIllustration,
+    landingSmartcarrierImage,
+    userTestimony,
+    googleMap,
+    registerIllustration,
+    smarthomeLogo,
     avatarUser,
     coursesWork,
-};
+    userProfile,
+    userProfileNavbar
+}

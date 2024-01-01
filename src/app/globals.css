@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.slick-slide > div {
+  margin: 0 25px;
+}
+
+.button-slide {
+  @apply w-[50px] h-[50px] border border-primary hover:bg-primary hover:shadow-md hover:shadow-[#98D6F9]  transition ease-out duration-100  rounded-full flex items-center justify-center
+}
+
+.contact-form {
+  @apply w-full bg-[#F5F5F5] border border-[#DDDDDD] p-[10px] ps-[15px] mt-[20px] mb-[20px] text-base
+}

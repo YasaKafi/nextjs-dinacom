@@ -1,7 +1,17 @@
+import LandingHero from "@/app/landing-component/landing-hero";
+import LandingFeature from "@/app/landing-component/landing-feature";
+import LandingSmartCarrier from "@/app/landing-component/landing-smartcarrier";
+import LandingTestimony from "@/app/landing-component/landing-testimony/landing-testimony";
+import LandingContact from "@/app/landing-component/landing-contact/landing-contact";
+
 export default function Home() {
   return (
-    <main className="flex h-screen flex-col items-center justify-center">
-      <h1>Home Page</h1>
-    </main>
+    <>
+        <LandingHero/>
+        <LandingFeature/>
+        <LandingSmartCarrier/>
+        <LandingTestimony/>
+        <LandingContact/>
+    </>
   )
 }
