@@ -1,7 +1,8 @@
 import React from 'react';
-import SliderTestimony from "@/app/landing-component/landing-testimony/slider-testimony";
+
 import Image from "next/image";
 import {landingTestimonyDecoration} from "@/app/lib/utils/icon";
+import SliderTestimony from "@/app/(pages)/(feature-pages)/landing-component/landing-testimony/slider-testimony";
 
 function LandingTestimony() {
     return (
