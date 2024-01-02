@@ -8,8 +8,8 @@ export default function Home() {
   return (
     <>
         {/*<LandingHero/>*/}
-        <LandingFeature/>
-        {/*<LandingSmartCarrier/>*/}
+        {/*<LandingFeature/>*/}
+        <LandingSmartCarrier/>
         {/*<LandingTestimony/>*/}
         {/*<LandingContact/>*/}
     </>
