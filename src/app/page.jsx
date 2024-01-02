@@ -9,8 +9,8 @@ export default function Home() {
     <>
         {/*<LandingHero/>*/}
         {/*<LandingFeature/>*/}
-        <LandingSmartCarrier/>
-        {/*<LandingTestimony/>*/}
+        {/*<LandingSmartCarrier/>*/}
+        <LandingTestimony/>
         {/*<LandingContact/>*/}
     </>
   )
