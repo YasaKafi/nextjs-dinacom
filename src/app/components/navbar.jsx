@@ -6,7 +6,7 @@ import NavbarMobileBtn from "@/app/components/navbar-mobile-btn";
 function Navbar() {
 
     return (
-        <div className="bg-white w-screen py-3 px-5 flex justify-between shadow-md fixed">
+        <div className="bg-white w-screen py-3 px-5 flex justify-between shadow-md fixed top-0 z-30">
 
             <div className="flex items-center gap-20">
                 <div className="lg:flex lg:items-center lg:gap-3  ">
