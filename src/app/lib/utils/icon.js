@@ -24,6 +24,7 @@ import iconExit from '@/app/lib/assets/svg/icon-exit.svg'
 
 
 
+
  export  {
     iconGoogle,
     brainDecoration,
@@ -48,5 +49,6 @@ import iconExit from '@/app/lib/assets/svg/icon-exit.svg'
     iconTwitterWhite,
     iconHamburger,
     iconExit
+,
 
 }

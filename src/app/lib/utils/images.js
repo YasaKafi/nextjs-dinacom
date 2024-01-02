@@ -9,6 +9,8 @@ import registerIllustration from '../assets/image/register-illustration.png'
 import smarthomeLogo from '../assets/image/smarthome-logo.png'
 import userProfile from '../assets/image/user-profile.png'
 import userProfileNavbar from '../assets/image/user-profile-navbar.png'
+import avatarUser from '../assets/image/avatarUser.png';
+import coursesWork from '../assets/image/coursesWork.png';
 
 export {
     logo,
@@ -20,6 +22,8 @@ export {
     googleMap,
     registerIllustration,
     smarthomeLogo,
+    avatarUser,
+    coursesWork,
     userProfile,
     userProfileNavbar
 }
