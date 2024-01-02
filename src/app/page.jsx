@@ -7,11 +7,11 @@ import LandingContact from "@/app/landing-component/landing-contact/landing-cont
 export default function Home() {
   return (
     <>
-        <LandingHero/>
+        {/*<LandingHero/>*/}
         <LandingFeature/>
-        <LandingSmartCarrier/>
-        <LandingTestimony/>
-        <LandingContact/>
+        {/*<LandingSmartCarrier/>*/}
+        {/*<LandingTestimony/>*/}
+        {/*<LandingContact/>*/}
     </>
   )
 }

@@ -5,6 +5,7 @@ import ProfileTrainingDetail
 function ProfilePage() {
     return (
         <>
+            <div className="h-[55px]"></div>
             <ProfileSection/>
             <ProfileTrainingDetail/>
         </>
