@@ -21,6 +21,7 @@ import iconInstagramWhite from '@/app/lib/assets/svg/icon-instagram-white.svg'
 import iconTwitterWhite from '@/app/lib/assets/svg/icon-twitter-white.svg'
 import iconHamburger from '@/app/lib/assets/svg/icon-hamburger.svg'
 import iconExit from '@/app/lib/assets/svg/icon-exit.svg'
+import bgHeroDetail from '@/app/lib/assets/image/bg-hero-detail.png'
 
 
 
@@ -48,7 +49,7 @@ import iconExit from '@/app/lib/assets/svg/icon-exit.svg'
     iconInstagramWhite,
     iconTwitterWhite,
     iconHamburger,
-    iconExit
-,
+    iconExit,
+    bgHeroDetail,
 
 }
