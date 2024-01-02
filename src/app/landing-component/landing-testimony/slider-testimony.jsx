@@ -106,26 +106,26 @@ function SliderTestimony() {
                 <Slider ref={sliderRef} {...settings}>
                     {data.map((item, index) => (
                             <div key={item.id}
-                                 className={`w-[400px] h-[230px]  border ${currentSlide === index ? 'border-primary bg-white' : 'border-[#DDDDDD] bg-transparent'} rounded-xl p-7 flex flex-col`}>
+                                 className={`w-full lg:w-[400px] h-[230px]  border ${currentSlide === index ? 'border-primary bg-white' : 'border-[#DDDDDD] bg-transparent'} rounded-xl p-3 lg:p-7 flex flex-col`}>
 
                                 <div className="w-full flex justify-between ">
 
-                                    <div className="flex gap-7 items-center">
-                                        <Image src={item.image} alt="User Testimony" width={50} height={50}/>
+                                    <div className="flex gap-3 lg:gap-7 items-center">
+                                        <Image className="w-[50px] h-[50px]" src={item.image} alt="User Testimony" width={50} height={50}/>
                                         <div>
-                                            <h1 className="font-medium text-base">{item.name}</h1>
+                                            <h1 className="font-medium text-sm lg:text-base">{item.name}</h1>
                                             <p className="text-[#4F5665] text-xs">{item.place}</p>
                                         </div>
                                     </div>
 
-                                    <div className="flex items-center gap-4">
-                                        <p className="text-[#4F5665] text-base">{item.rating}</p>
+                                    <div className="flex items-center gap-2 lg:gap-4">
+                                        <p className="text-[#4F5665] text-xs lg:text-base">{item.rating}</p>
                                         <Image src={iconStar} alt="Rating" width={16} height={16}/>
                                     </div>
 
                                 </div>
 
-                                <p className="mt-4 text-sm text-textPrimary">
+                                <p className="mt-4 text-xs lg:text-sm text-textPrimary">
                                     {item.description}
                                 </p>
 
