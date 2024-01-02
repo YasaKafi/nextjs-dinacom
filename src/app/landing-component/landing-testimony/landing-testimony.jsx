@@ -5,7 +5,7 @@ import {landingTestimonyDecoration} from "@/app/lib/utils/icon";
 
 function LandingTestimony() {
     return (
-        <div className="h-screen w-screen flex flex-col items-center p-[25px] lg:px-[70px] lg:py-[50px] relative">
+        <div className="h-screen w-screen flex flex-col items-center px-[25px] py-[35px] lg:px-[70px] lg:py-[50px] relative">
 
             <Image
                 className="absolute left-0"
