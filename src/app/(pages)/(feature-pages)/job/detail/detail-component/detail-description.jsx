@@ -3,8 +3,8 @@ import { LuClock4 } from "react-icons/lu";
 import "../../../../../globals.css";
 import { HiBadgeCheck } from "react-icons/hi";
 import Image from "next/image";
-import { logoCompany } from "@/app/lib/utils/images";
 import ButtonApply from "../components/button";
+import jobDetail from "@/app/lib/services/jobDetail";
 
 const responsibilities = [
   "Fokus pada pengelolaan dan pemrosesan data termasuk perencanaan data, visualisasi, data besar, atau analitik.",
@@ -16,7 +16,14 @@ const responsibilities = [
   "Berkolaborasi dan berpartisipasi dalam implementasi proyek dan berbagai upaya yang berfokus pada kebutuhan bisnis.",
 ];
 
-export default function DetailDescription() {
+
+async function getDataJob() {
+  const jobData = await jobDetail();
+  return jobData.data;
+}
+
+export default async function DetailDescription() {
+  const jobData = await getDataJob();
   
   return (
     <div className="w-full flex flex-col justify-start px-6 lg:px-24">
@@ -65,11 +72,11 @@ export default function DetailDescription() {
             </div>
             <div className="mt-6 flex flex-col">
               <h2 className="box-detail-h2">Jobdesk</h2>
-              <h3 className="lg:text-lg text-base">Copywriting</h3>
+              <h3 className="lg:text-lg text-base">{jobData.jobdesk}</h3>
             </div>
             <div className="mt-6 flex flex-col">
               <h2 className="box-detail-h2">Tipe Pekerjaan</h2>
-              <h3 className="lg:text-lg text-base">Full-Time</h3>
+              <h3 className="lg:text-lg text-base">{jobData.type_job}</h3>
             </div>
             <div className="mt-6 flex flex-col">
               <h2 className="box-detail-h2">Gaji</h2>
@@ -95,7 +102,7 @@ export default function DetailDescription() {
                   </div>
                 </div>
                 <Image
-                  src={logoCompany}
+                  src={jobData.company_image}
                   alt="backgroundDetail"
                   priority
                   className="object-cover w-[15%] md:w-[15%] border-2 border-gray-300 rounded-lg"
@@ -104,7 +111,7 @@ export default function DetailDescription() {
               <div className="flex flex-row w-full mt-4 justify-between">
                 <div className="flex flex-col">
                   <h3>Lokasi</h3>
-                  <h3>Area DKI Jakarta</h3>
+                  <h3>{jobData.location}</h3>
                 </div>
                 <div className="flex items-center py-1 bg-blue-300 px-2 rounded-lg">
                   <h3 className="text-sm text-white">hybird</h3>
