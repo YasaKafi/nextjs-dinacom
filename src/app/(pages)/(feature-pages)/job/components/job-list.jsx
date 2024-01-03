@@ -69,19 +69,22 @@ function JobList() {
 
             </div>
             {dataDummy.map((item, index) => (
-                <div className="w-full h-[20vh] bg-white border border-colorBorder rounded-xl">
+                <div className="w-full  bg-white border border-colorBorder rounded-md p-6 mb-4">
                     <div className="flex">
-                        <Image src={jobImage} alt="Job Image" width={100} height={100}/>
-                        <div className="flex flex-col">
-                            <h1>Linear Company</h1>
-                            <h1>FrontEnd Developer</h1>
-                            <div className="flex">
+                        <Image className="w-[70px] h-[70px] me-5" src={jobImage} alt="Job Image" width={100} height={100}/>
+                        <div className="flex flex-col gap-3">
+                            <h1 className="text-lg text-textPrimary">Linear Company</h1>
+                            <h1 className="font-semibold text-textPrimary text-2xl">FrontEnd Developer</h1>
+                            <div className="flex  w-[80%] justify-between text-sm">
                                 <h1>London</h1>
+                                <p>-</p>
                                 <h1>Full Time</h1>
+                                <p>-</p>
                                 <h1>Rp.1.000.000 - 2.000.000</h1>
+                                <p>-</p>
                                 <h1>2 day ago</h1>
                             </div>
-                            <p>Mollit in laborum tempor Lorem incididunt irure. Aute eu ex ad sunt. Pariatur sint culpa
+                            <p className="text-base text-[#141414] text-opacity-70">Mollit in laborum tempor Lorem incididunt irure. Aute eu ex ad sunt. Pariatur sint culpa
                                 do incididunt eiusmod eiusmod culpa. laborum tempor Lorem incididunt.</p>
                         </div>
                     </div>

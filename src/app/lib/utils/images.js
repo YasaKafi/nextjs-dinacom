@@ -38,7 +38,7 @@ export {
     logoCompany,
     emptyDataIlustration,
     decorationBox,
-    decorationBottom
+    decorationBottom,
     profileBanner,
     userProfileImage,
     jobImage,
