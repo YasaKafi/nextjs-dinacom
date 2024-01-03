@@ -1,5 +1,5 @@
-import ContactForm from "@/app/(pages)/(feature-pages)/landing-component/landing-contact/contact-form";
-import ContactDetail from "@/app/(pages)/(feature-pages)/landing-component/landing-contact/contact-detail";
+import ContactForm from "@/app/(pages)/(feature-pages)/components/landing-contact/contact-form";
+import ContactDetail from "@/app/(pages)/(feature-pages)/components/landing-contact/contact-detail";
 
 
 function LandingContact() {
