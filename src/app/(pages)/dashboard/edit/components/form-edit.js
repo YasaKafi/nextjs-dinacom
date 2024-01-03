@@ -6,7 +6,7 @@ export default function FormEdit({defaultValue, label}) {
                 {label}
               </h2>
               <input
-                className="w-full h-14 text-base rounded-lg border px-4 border-black focus:outline-none"
+                className="w-full h-14 mt-1 text-base rounded-lg border px-4 border-black focus:outline-none"
                 type="text"
                 defaultValue={defaultValue}
               />
