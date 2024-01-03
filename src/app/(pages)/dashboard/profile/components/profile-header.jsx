@@ -3,10 +3,10 @@ import Image from "next/image";
 
 function ProfileHeader() {
     return (
-        <div className="w-full h-[50vh] bg-red border border-[#C4C4C4] rounded-xl overflow-hidden relative">
+        <div className="w-full h-1/2 bg-red border border-[#C4C4C4] rounded-xl overflow-hidden relative">
 
             <div className="h-2/3 w-full relative">
-                <Image className="w-full h-full absolute" src={profileBanner} alt="Profile Banner" width={1000} height={1000}/>
+                <Image className="w-full h-full absolute object-cover" src={profileBanner} alt="Profile Banner" width={1000} height={1000}/>
                 <div className="h-full w-full absolute flex justify-end items-end p-[30px]">
                     <button className="bg-white px-6 py-3 text-primary text-sm font-semibold rounded-xl">
                         Edit Sampul Foto
