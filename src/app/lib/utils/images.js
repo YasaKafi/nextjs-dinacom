@@ -1,4 +1,5 @@
 import logo from '../assets/image/logo.png'
+import logoCompany from '../assets/image/logo-company.png'
 import registerImage from '../assets/image/register-image.png'
 import landingHeroImage from '../assets/image/landing-hero-image.png'
 import landingFeatIllustration from '../assets/image/landing-feat-illustration.png'
@@ -29,6 +30,7 @@ export {
     coursesWork,
     userProfile,
     userProfileNavbar,
+    logoCompany,
     profileBanner,
     userProfileImage
 }
