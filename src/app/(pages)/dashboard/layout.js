@@ -10,12 +10,12 @@ const montserrat = Montserrat({ subsets: ["latin"] });
 export default function DashboardLayout({ children }) {
   return (
     <main className={montserrat.className}>
-      <div className="w-full h-screen flex flex-row">
+      <div className="w-full h-screen flex flex-row ">
         <SidebarProvider>
           <MainSideBar />
           <div className="w-full flex flex-col">
             <MainHeader />
-            <main className="w-full h-[87%] bg-white">{children}</main>
+            <main className="w-full h-[87%] bg-gray-100 mb-10">{children}</main>
           </div>
         </SidebarProvider>
       </div>

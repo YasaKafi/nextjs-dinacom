@@ -28,7 +28,7 @@ function ProfileTrainingDetail() {
     ];
 
     return (
-        <div className="h-[50vh] w-screen p-[50px]">
+        <div className="h-[50vh] w-full px-3">
             <Tabs value="html">
                 <TabsHeader
                             indicatorProps={{

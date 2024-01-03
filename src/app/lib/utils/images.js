@@ -15,6 +15,11 @@ import coursesWork from '../assets/image/coursesWork.png';
 import emptyDataIlustration from '../assets/image/empty-data-ilustration.png';
 import decorationBox from '../assets/image/decoration-box.png';
 import decorationBottom from '../assets/image/decoration-box-2.png';
+import profileBanner from '../assets/image/profile-banner.png';
+import userProfileImage from '../assets/image/user-profile-image.png';
+import jobImage from '../assets/image/job-image.png';
+import courseHeaderBanner from '../assets/image/course-header-banner.png';
+
 
 export {
     logo,
@@ -34,4 +39,8 @@ export {
     emptyDataIlustration,
     decorationBox,
     decorationBottom
+    profileBanner,
+    userProfileImage,
+    jobImage,
+    courseHeaderBanner
 }
