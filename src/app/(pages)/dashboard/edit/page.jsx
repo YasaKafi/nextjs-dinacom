@@ -3,6 +3,8 @@ import Image from "next/image";
 import { editProfileUser } from "@/app/lib/utils/images";
 import { FiEdit } from "react-icons/fi";
 import FormEdit from "./components/form-edit";
+import Form from "../../(initial-pages)/components/form";
+import RadioGender from "./components/radio-gender";
 
 
 export default function EditProfilePage() {
@@ -36,6 +38,7 @@ export default function EditProfilePage() {
               label={label}
             />
           ))}
+          <RadioGender/>
           
         </div>
       </div>
