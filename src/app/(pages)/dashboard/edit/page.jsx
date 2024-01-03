@@ -53,6 +53,14 @@ export default function EditProfilePage() {
             />
           ))}
           <RadioGender />
+          <div className="w-full h-16 flex flex-row gap-6 mt-4">
+            <div className="w-1/2">
+              <ComboBoxEdit domicile={province} label="Provinsi" />
+            </div>
+            <div className="w-1/2">
+              <ComboBoxEdit domicile={province} label="Kota/Kabupaten" />
+            </div>
+          </div>
           
         </div>
       </div>
