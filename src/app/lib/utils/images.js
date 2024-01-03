@@ -15,6 +15,7 @@ import coursesWork from '../assets/image/coursesWork.png';
 import profileBanner from '../assets/image/profile-banner.png';
 import userProfileImage from '../assets/image/user-profile-image.png';
 import jobImage from '../assets/image/job-image.png';
+import courseHeaderBanner from '../assets/image/course-header-banner.png';
 
 
 export {
@@ -34,5 +35,6 @@ export {
     logoCompany,
     profileBanner,
     userProfileImage,
-    jobImage
+    jobImage,
+    courseHeaderBanner
 }
