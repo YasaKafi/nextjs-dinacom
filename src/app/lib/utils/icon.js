@@ -27,9 +27,6 @@ import iconSearch from '@/app/lib/assets/svg/icon-search.svg'
 import jobHeaderIllustration from '@/app/lib/assets/svg/job-header-illustration.svg'
 import notebook from '@/app/lib/assets/svg/notebook.svg'
 
-
-
-
  export  {
     iconGoogle,
     brainDecoration,
@@ -58,6 +55,6 @@ import notebook from '@/app/lib/assets/svg/notebook.svg'
     icLocation,
     iconSearch,
     jobHeaderIllustration,
-    notebook
+    notebook,
 
 }
