@@ -1,4 +1,4 @@
-"use client";
+
 import React from "react";
 import MainHeader from "./components/MainHeader";
 import MainSideBar from "./components/MainSiderBar";
