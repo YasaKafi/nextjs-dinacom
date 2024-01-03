@@ -15,3 +15,6 @@
   @apply w-full bg-[#F5F5F5] border border-[#DDDDDD] p-[10px] ps-[15px] mt-[20px] mb-[20px] text-base
 }
 
+.box-detail-h2{
+  @apply w-full text-lg lg:text-xl font-medium
+}

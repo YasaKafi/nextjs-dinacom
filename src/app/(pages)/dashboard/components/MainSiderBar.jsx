@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import { smartHomeLogo } from "@/app/lib/utils/images";
 import { TfiControlBackward } from "react-icons/tfi";
 import { PiSuitcaseSimple } from "react-icons/pi";
 import { SiGitbook } from "react-icons/si";
@@ -10,6 +9,7 @@ import Link from "next/link";
 import { useSidebar } from "./SidebarContext";
 import { FaRegUser } from "react-icons/fa";
 import { IoSettingsOutline } from "react-icons/io5";
+import { smarthomeLogo } from "@/app/lib/utils/images";
 
 export default function MainSideBar() {
   const [isSideBarOpen, setIsSideBarOpen] = useSidebar();
@@ -29,7 +29,7 @@ export default function MainSideBar() {
           <h2 className="font-montserrat text-lg  text-blue-400 font-semibold pr-4 ">
             Smart Carrier
           </h2>
-          <Image src={smartHomeLogo} alt="" />
+          <Image src={smarthomeLogo} alt="" />
         </div>
 
         <TfiControlBackward

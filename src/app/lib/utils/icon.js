@@ -21,6 +21,7 @@ import iconInstagramWhite from '@/app/lib/assets/svg/icon-instagram-white.svg'
 import iconTwitterWhite from '@/app/lib/assets/svg/icon-twitter-white.svg'
 import iconHamburger from '@/app/lib/assets/svg/icon-hamburger.svg'
 import iconExit from '@/app/lib/assets/svg/icon-exit.svg'
+import bgHeroDetail from '@/app/lib/assets/image/bg-hero-detail.png'
 import icLocation from '@/app/lib/assets/svg/ic-location.svg'
 import iconSearch from '@/app/lib/assets/svg/icon-search.svg'
 import jobHeaderIllustration from '@/app/lib/assets/svg/job-header-illustration.svg'
@@ -53,6 +54,7 @@ import notebook from '@/app/lib/assets/svg/notebook.svg'
     iconTwitterWhite,
     iconHamburger,
     iconExit,
+    bgHeroDetail,
     icLocation,
     iconSearch,
     jobHeaderIllustration,
