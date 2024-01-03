@@ -11,6 +11,9 @@ import userProfile from '../assets/image/user-profile.png'
 import userProfileNavbar from '../assets/image/user-profile-navbar.png'
 import avatarUser from '../assets/image/avatarUser.png';
 import coursesWork from '../assets/image/coursesWork.png';
+import profileBanner from '../assets/image/profile-banner.png';
+import userProfileImage from '../assets/image/user-profile-image.png';
+
 
 export {
     logo,
@@ -25,5 +28,7 @@ export {
     avatarUser,
     coursesWork,
     userProfile,
-    userProfileNavbar
+    userProfileNavbar,
+    profileBanner,
+    userProfileImage
 }
