@@ -60,7 +60,7 @@ function Page() {
     return (
         <div className="w-screen bg-gray-100">
             <InternshipHeader/>
-            <div className="mb-10 px-[90px]">
+            <div className=" px-[90px]">
                 <SearchBarCourses/>
                 <div className="h-full grid grid-cols-3 gap-5 mt-10">
 
@@ -83,6 +83,7 @@ function Page() {
 
 
                 </div>
+                <div className="h-10"></div>
             </div>
         </div>
     );
