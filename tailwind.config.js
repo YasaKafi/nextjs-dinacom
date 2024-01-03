@@ -20,6 +20,10 @@ module.exports = withMT(
             colorBorder: "#C4C4C4"
 
           },
+          fontFamily: {
+            montserrat:['Montserrat', 'sans-serif'],
+            
+          },
         },
       },
       plugins: [

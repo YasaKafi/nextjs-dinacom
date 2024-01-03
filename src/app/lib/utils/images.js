@@ -19,6 +19,7 @@ import profileBanner from '../assets/image/profile-banner.png';
 import userProfileImage from '../assets/image/user-profile-image.png';
 import jobImage from '../assets/image/job-image.png';
 import courseHeaderBanner from '../assets/image/course-header-banner.png';
+import editProfileUser from '../assets/image/edit-user-profile.png';
 
 
 export {
@@ -38,9 +39,10 @@ export {
     logoCompany,
     emptyDataIlustration,
     decorationBox,
-    decorationBottom
+    decorationBottom,
     profileBanner,
     userProfileImage,
     jobImage,
-    courseHeaderBanner
+    courseHeaderBanner,
+    editProfileUser,
 }
