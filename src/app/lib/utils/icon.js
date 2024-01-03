@@ -28,6 +28,8 @@ import iconSearch from '@/app/lib/assets/svg/icon-search.svg'
 import notebook from '@/app/lib/assets/svg/notebook.svg'
 import iconArrowDown from '@/app/lib/assets/svg/icon-arrow-down.svg'
 import iconFilter from '@/app/lib/assets/svg/icon-filter.svg'
+import internshipBanner from '@/app/lib/assets/svg/internship-banner.svg'
+import iconCompany from '@/app/lib/assets/svg/icon-company.svg'
 
  export  {
     iconGoogle,
@@ -60,5 +62,6 @@ import iconFilter from '@/app/lib/assets/svg/icon-filter.svg'
     notebook,
     iconArrowDown,
     iconFilter,
-
+    internshipBanner,
+     iconCompany
 }
