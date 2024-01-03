@@ -8,10 +8,13 @@ import userTestimony from '../assets/image/user-testimony.png'
 import googleMap from '../assets/image/map.png'
 import registerIllustration from '../assets/image/register-illustration.png'
 import smarthomeLogo from '../assets/image/smarthome-logo.png'
-import userProfile from '../assets/image/user-profile.png'
+import userProfile from '../assets/image/userProfile.png'
 import userProfileNavbar from '../assets/image/user-profile-navbar.png'
 import avatarUser from '../assets/image/avatarUser.png';
 import coursesWork from '../assets/image/coursesWork.png';
+import emptyDataIlustration from '../assets/image/empty-data-ilustration.png';
+import decorationBox from '../assets/image/decoration-box.png';
+import decorationBottom from '../assets/image/decoration-box-2.png';
 
 export {
     logo,
@@ -27,5 +30,8 @@ export {
     coursesWork,
     userProfile,
     userProfileNavbar,
-    logoCompany
+    logoCompany,
+    emptyDataIlustration,
+    decorationBox,
+    decorationBottom
 }

@@ -3,7 +3,17 @@
 import { useState } from "react";
 import { Tab } from "@headlessui/react";
 import Image from "next/image";
-import { coursesWork } from "@/app/lib/utils/images";
+import {
+  coursesWork,
+  decorationBottom,
+  decorationBox,
+  emptyDataIlustration,
+} from "@/app/lib/utils/images";
+import {
+  buildStyles,
+  CircularProgressbarWithChildren,
+} from "react-circular-progressbar";
+import { FaCheck } from "react-icons/fa6";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -65,8 +75,8 @@ export default function Example() {
                   "w-full rounded-2xl py-2.5 text-sm font-medium",
                   "ring-white/60  focus:outline-none focus:ring-2",
                   selected
-                    ? "bg-white text-blue-700"
-                    : "text-blue hover:bg-white/[0.12] hover:text-white",
+                    ? "bg-primary bg-opacity-25 text-textPrimary"
+                    : "text-blue hover:bg-gray-200 hover:text-black",
                   index !== Object.keys(categories).length - 1 && "mr-12"
                 )
               }
@@ -85,56 +95,84 @@ export default function Example() {
                 "ring-white/60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2"
               )}
             >
-              <ul className="h-full flex flex-col lg:grid lg:grid-cols-2 lg:grid-rows-3 lg:gap-3 gap-2 overflow-auto ">
-                {posts.map((post) => (
-                  <div
-                    key={post.id}
-                    className="w-full h-full relative flex flex-col rounded-xl p-5 bg-white hover:bg-gray-100 mb-5"
-                  >
-                    <div className="flex flex-row h-[70%] ">
-                      <Image
-                        src={post.imageUrl}
-                        alt=""
-                        className="rounded-xl w-1/5 h-4/5 object-cover "
-                      />
-                      <div className="px-6 ">
-                        <h2 className="font-semibold text-xs md:text-base">
-                          {post.title}
-                        </h2>
-                        <div className="py-[5px]  mt-3 w-[30%] bg-green-500  flex items-center justify-center rounded-xl">
-                          <p className="md:text-xs text-[10px] font-semibold text-white">
-                            Pemula
-                          </p>
+              {posts.length === 0 && (
+                <div className="flex flex-col w-full items-center justify-center h-full ">
+                  <Image src={emptyDataIlustration} alt="" />
+                  <h2 className="text-xl font-medium text-gray-500 w-1/2 text-center">
+                    Tidak ada pelatihan saat ini, Ayo temukan peluang baru dan
+                    tingkatkan skill anda sekarang
+                    <span className="text-primary"> disini</span>
+                  </h2>
+                </div>
+              )}
+              {posts.length > 0 && (
+                <ul className="h-full flex flex-col lg:grid lg:grid-cols-2 lg:grid-rows-3 lg:gap-3 gap-2 overflow-auto ">
+                  {posts.map((post) => (
+                    <div
+                      key={post.id}
+                      className="w-full h-full relative flex flex-row rounded-xl p-5 bg-white border-2 border-gray-50 shadow-sm  mb-5"
+                    >
+                      <div className="absolute top-0 left-0 ">
+                        <Image src={decorationBox} />
+                      </div>
+                      <div className="absolute bottom-0 right-0 ">
+                        <Image src={decorationBottom} />
+                      </div>
+
+                      <div className="flex flex-col w-[70%] justify-between ">
+                        <div className="pr-6">
+                          <h2 className="font-semibold text-xs md:text-base">
+                            {post.title}
+                          </h2>
+                        </div>
+                        <div className="flex flex-row items-center gap-3">
+                          <div className="w-8 h-8 sm:w-14 sm:h-14 sm:mb-4 ">
+                            <CircularProgressbarWithChildren
+                              value={post.presentase}
+                              strokeWidth={10}
+                              styles={buildStyles({
+                                pathColor: `${
+                                  post.presentase === 100
+                                    ? "#23BB86"
+                                    : "rgba(40, 178, 255, 1)"
+                                } `,
+                                trailColor: "#d6d6d6",
+                                backgroundColor: "#3e98c7",
+                              })}
+                            >
+                              <h2 className="text-sm">
+                                {post.presentase === 100 ? (
+                                  <FaCheck size={20} color="green" />
+                                ) : (
+                                  <h2 className="text-[10px] lg:text-sm">
+                                    {post.presentase + "%"}
+                                  </h2>
+                                )}
+                              </h2>
+                            </CircularProgressbarWithChildren>
+                          </div>
+                          <h2
+                            className={`${
+                              post.presentase === 100
+                                ? "pb-3 font-medium text-green-500"
+                                : "hidden"
+                            }`}
+                          >
+                            Lulus
+                          </h2>
                         </div>
                       </div>
-                    </div>
-                    <div className="w-full  h-[30%] flex flex-row justify-start items-center">
-                      <h2 className="md:text-base text-sm font-semibold">
-                        {post.presentase}%
-                      </h2>
-                      <div className="w-full h-[50%] bg-gray-300  mx-6 rounded-xl ">
-                        <div
-                          className={`h-full rounded-xl ${
-                            post.presentase === 100
-                              ? "bg-green-500"
-                              : "bg-blue-400"
-                          }`}
-                          style={{ width: `${post.presentase}%` }}
-                        ></div>
+                      <div className="w-[30%] mb-4 flex flex-row justify-start items-center">
+                        <Image
+                          src={post.imageUrl}
+                          alt=""
+                          className="rounded-xl w-full h-full object-cover "
+                        />
                       </div>
-                      <button
-                        className={`${
-                          post.presentase === 100
-                            ? "bg-green-500"
-                            : "bg-blue-400"
-                        } py-2 px-3 text-[10px]  md:text-xs rounded-lg text-white`}
-                      >
-                        {post.presentase === 100 ? "Selesai" : "Berlangsung"}
-                      </button>
                     </div>
-                  </div>
-                ))}
-              </ul>
+                  ))}
+                </ul>
+              )}
             </Tab.Panel>
           ))}
         </Tab.Panels>
