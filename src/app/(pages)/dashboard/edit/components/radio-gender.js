@@ -16,7 +16,7 @@ export default function RadioGender() {
         row
         aria-labelledby="demo-row-radio-buttons-group-label"
         name="row-radio-buttons-group"
-        className="mt-4 gap-16"
+        className="mt-4 gap-3 lg:gap-16"
       >
         <FormControlLabel
           value="female"
