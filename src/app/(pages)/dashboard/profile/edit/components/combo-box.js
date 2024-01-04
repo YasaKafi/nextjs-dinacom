@@ -44,7 +44,7 @@ export default function ComboBoxEdit({ domicile,label }) {
             leaveTo="opacity-0"
             afterLeave={() => setQuery("")}
           >
-            <Combobox.Options className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-xs shadow-lg ring-1 ring-black/5 focus:outline-none  lg:text-base">
+            <Combobox.Options className="absolute mt-1 max-h-60 w-full z-50 overflow-auto rounded-md bg-white py-1 text-xs shadow-lg ring-1 ring-black/5 focus:outline-none  lg:text-base">
               {filteredPeople.length === 0 && query !== "" ? (
                 <div className="relative cursor-default select-none px-4 py-2 text-gray-700">
                   Nothing found.
@@ -54,8 +54,8 @@ export default function ComboBoxEdit({ domicile,label }) {
                   <Combobox.Option
                     key={domicile.id}
                     className={({ active }) =>
-                      `relative cursor-default select-none py-2 pl-10 pr-4 ${
-                        active ? "bg-teal-600 text-white" : "text-gray-900"
+                      `relative cursor-default select-none py-2 pl-10 pr-4 z-50 ${
+                        active ? "bg-teal-600 text-white z-50" : "text-gray-900 z-50"
                       }`
                     }
                     value={domicile}
