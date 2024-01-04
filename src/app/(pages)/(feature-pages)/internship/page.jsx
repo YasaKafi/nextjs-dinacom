@@ -1,11 +1,12 @@
-import React from 'react';
-import CourseHeader from "@/app/(pages)/(feature-pages)/courses/components/header";
+import InternshipHeader from "@/app/(pages)/(feature-pages)/internship/components/header";
 import SearchBarCourses from "@/app/(pages)/(feature-pages)/courses/components/search-bar";
 import Image from "next/image";
-import {courseHeaderBanner} from "@/app/lib/utils/images";
-import course from "@/app/lib/services/course";
+import {courseHeaderBanner, jobImage} from "@/app/lib/utils/images";
+import React from "react";
+import {iconCompany} from "@/app/lib/utils/icon";
 
-async function Page() {
+function Page() {
+
     const data = [
         {
             id:1,
@@ -56,33 +57,27 @@ async function Page() {
         }
     ]
 
-    const fetchCourse = await course()
-
-    console.log(fetchCourse)
-
     return (
-        <div className="w-screen bg-gray-100 ">
-            <CourseHeader/>
-            <div className="w-full h-full px-[80px] mt-20 ">
+        <div className="w-screen bg-gray-100">
+            <InternshipHeader/>
+            <div className=" px-[90px]">
                 <SearchBarCourses/>
-                <div className="h-full grid grid-cols-4 gap-5 mt-10">
+                <div className="h-full grid grid-cols-3 gap-5 mt-10">
 
-                    {fetchCourse.map((item,index)=> (
-                        <div className="rounded-xl h-[400px] bg-white overflow-hidden mb-5">
+                    {data.map((item, index) => (
+                        <div className="rounded-xl  bg-white overflow-hidden mb-5 p-6 flex gap-5">
 
-                            <Image className="w-full h-[130px] object-cover" src={item.image_course} alt="Course Header Banner"
-                                   width={300} height={300}/>
-
-                            <div className="flex flex-col h-[270px] justify-between gap-12 px-5 py-4">
-
-                                <h1 className="text-primary font-bold text-lg">{item.title}</h1>
-                                <p className="text-textPrimary font-light text-xs">{item.description}</p>
-
-                                <button className="bg-primary w-2/3 py-3 text-white rounded-xl">
-                                    Daftar Sekarang
-                                </button>
+                            <div className="w-[70px] h-[70px] border border-colorBorder rounded-md overflow-hidden">
+                                <Image className="w-full h-full object-cover" src={jobImage} alt="Icon Company"
+                                       width={50} height={50}/>
                             </div>
 
+                            <div className="flex flex-col">
+                                <h2 className="font-semibold text-xs text-primary">Desember 2023</h2>
+                                <h1 className="font-semibold text-base text-textPrimary mb-10">Digital Marketing Nuri</h1>
+                                <h2 className="font-semibold text-sm text-textPrimary">PT Nuri Gaya Citra</h2>
+                                <h1 className="text-xs text-textPrimary">Digital Marketing</h1>
+                            </div>
                         </div>
                     ))}
 
