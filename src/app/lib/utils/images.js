@@ -19,6 +19,7 @@ import profileBanner from '../assets/image/profile-banner.png';
 import userProfileImage from '../assets/image/user-profile-image.png';
 import jobImage from '../assets/image/job-image.png';
 import courseHeaderBanner from '../assets/image/course-header-banner.png';
+import editProfileUser from '../assets/image/edit-user-profile.png';
 import internshipPersonImage from '../assets/image/internship-person-image.png';
 
 export {
@@ -43,5 +44,6 @@ export {
     userProfileImage,
     jobImage,
     courseHeaderBanner,
+    editProfileUser,
     internshipPersonImage
 }
