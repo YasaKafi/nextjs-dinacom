@@ -15,7 +15,7 @@ export default function DashboardLayout({ children }) {
           <MainSideBar />
           <div className="w-full flex flex-col">
             <MainHeader />
-            <main className="w-full h-[87%] bg-gray-100 mb-10">{children}</main>
+            <main className="w-full h-full bg-white mb-10">{children}</main>
           </div>
         </SidebarProvider>
       </div>
