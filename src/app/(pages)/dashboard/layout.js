@@ -1,4 +1,3 @@
-
 import React from "react";
 import MainHeader from "./components/MainHeader";
 import MainSideBar from "./components/MainSiderBar";
@@ -8,6 +7,7 @@ import { SidebarProvider } from "./components/SidebarContext";
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 export default function DashboardLayout({ children }) {
+  
   return (
     <main className={montserrat.className}>
       <div className="w-full h-screen flex flex-row ">
@@ -15,7 +15,7 @@ export default function DashboardLayout({ children }) {
           <MainSideBar />
           <div className="w-full flex flex-col">
             <MainHeader />
-            <main className="w-full h-[87%] bg-gray-100 mb-10">{children}</main>
+            <main className="w-full h-[87%] bg-white ">{children}</main>
           </div>
         </SidebarProvider>
       </div>
