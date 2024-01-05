@@ -1,15 +1,13 @@
 "use client";
+
 import React from "react";
 import Image from "next/image";
 import { FiMenu } from "react-icons/fi";
-import {
-  avatarUser,
-  emptyDataIlustration,
-  userProfile,
-} from "@/app/lib/utils/images";
+import { userProfile } from "@/app/lib/utils/images";
 import { useSidebar } from "./SidebarContext";
 import { IoIosArrowDown } from "react-icons/io";
-export default function MainHeader() {
+export default function MainHeader({getPageTitle}) {
+  
   const [isSideBarOpen, toggleSidebar] = useSidebar();
 
   const handleMenuClick = () => {
@@ -28,7 +26,7 @@ export default function MainHeader() {
         </div>
 
         <h2 className="font-semibold font-montserrat text-lg lg:text-2xl pl-16 ">
-          Progress Pelatihan
+          {getPageTitle}
         </h2>
         <div className="w-1/4 h-px ml-4 border-2 border-black rounded-xl"></div>
       </div>
@@ -51,7 +49,7 @@ export default function MainHeader() {
         </div>
 
         <div className="mr-4">
-        <IoIosArrowDown size={30}/>
+          <IoIosArrowDown size={30} />
         </div>
       </div>
     </div>
