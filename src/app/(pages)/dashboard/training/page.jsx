@@ -7,7 +7,7 @@ import {
   coursesWork,
   decorationBottom,
   decorationBox,
-  emptyDataIlustration,
+  emptyDataIlustrationTraining,
 } from "@/app/lib/utils/images";
 import TrainingCard from "./components/card-training";
 
@@ -93,7 +93,7 @@ export default function Example() {
             >
               {posts.length === 0 && (
                 <div className="flex flex-col w-full items-center justify-center h-full ">
-                  <Image src={emptyDataIlustration} alt="" />
+                  <Image src={emptyDataIlustrationTraining} alt="" />
                   <h2 className="text-xl font-medium text-gray-500 w-1/2 text-center">
                     Tidak ada pelatihan saat ini, Ayo temukan peluang baru dan
                     tingkatkan skill anda sekarang

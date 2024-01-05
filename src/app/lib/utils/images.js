@@ -12,7 +12,8 @@ import userProfile from '../assets/image/userProfile.png'
 import userProfileNavbar from '../assets/image/user-profile-navbar.png'
 import avatarUser from '../assets/image/avatarUser.png';
 import coursesWork from '../assets/image/coursesWork.png';
-import emptyDataIlustration from '../assets/image/empty-data-ilustration.png';
+import emptyDataIlustrationTraining from '../assets/image/empty-data-ilustration.png';
+import emptyDataIlustrationInternship from '../assets/image/empty-data-ilustration-internship.png';
 import decorationBox from '../assets/image/decoration-box.png';
 import decorationBottom from '../assets/image/decoration-box-2.png';
 import profileBanner from '../assets/image/profile-banner.png';
@@ -37,7 +38,7 @@ export {
     userProfile,
     userProfileNavbar,
     logoCompany,
-    emptyDataIlustration,
+    emptyDataIlustrationTraining,
     decorationBox,
     decorationBottom,
     profileBanner,
@@ -45,5 +46,6 @@ export {
     jobImage,
     courseHeaderBanner,
     editProfileUser,
-    internshipPersonImage
+    internshipPersonImage,
+    emptyDataIlustrationInternship
 }
