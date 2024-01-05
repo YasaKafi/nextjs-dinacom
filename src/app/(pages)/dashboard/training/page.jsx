@@ -102,7 +102,7 @@ export default function Example() {
                 </div>
               )}
               {posts.length > 0 && (
-                <div className="h-full grid grid-cols-2 gap-6 overflow-auto ">
+                <div className="h-full grid grid-cols-2 grid-rows-3 gap-6 overflow-auto ">
                   {posts.map((post) => (
                     <TrainingCard
                     key={post.id}
