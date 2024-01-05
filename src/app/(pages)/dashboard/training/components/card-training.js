@@ -5,7 +5,7 @@ import { buildStyles } from "react-circular-progressbar";
 
 const TrainingCard = ({ post, decorationBox, decorationBottom }) => {
   return (
-    <div className="w-full h-full relative flex flex-row rounded-xl p-5 bg-white  shadow-md mb-5">
+    <div className="w-full relative flex flex-row rounded-xl p-5 bg-white  shadow-md mb-5">
       <div className="absolute top-0 left-0">
         <Image src={decorationBox} />
       </div>

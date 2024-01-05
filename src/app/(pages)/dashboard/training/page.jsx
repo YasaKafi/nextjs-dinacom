@@ -102,7 +102,7 @@ export default function Example() {
                 </div>
               )}
               {posts.length > 0 && (
-                <ul className="h-full flex flex-col lg:grid lg:grid-cols-2 lg:grid-rows-3 lg:gap-6 gap-2 overflow-auto ">
+                <div className="h-full grid grid-cols-2 gap-6 overflow-auto ">
                   {posts.map((post) => (
                     <TrainingCard
                     key={post.id}
@@ -111,7 +111,7 @@ export default function Example() {
                     decorationBottom={decorationBottom}
                   />
                   ))}
-                </ul>
+                </div>
               )}
             </Tab.Panel>
           ))}
