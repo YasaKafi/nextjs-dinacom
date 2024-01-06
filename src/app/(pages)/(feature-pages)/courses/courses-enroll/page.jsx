@@ -6,7 +6,7 @@ export default function EnrollCourses() {
   return (
       <main className="w-full">
         <HeroComponent />
-        
+        <MainComponent />
       </main>
   );
 }
