@@ -22,6 +22,7 @@ import jobImage from '../assets/image/job-image.png';
 import courseHeaderBanner from '../assets/image/course-header-banner.png';
 import editProfileUser from '../assets/image/edit-user-profile.png';
 import internshipPersonImage from '../assets/image/internship-person-image.png';
+import bgHeroBuilding from '../assets/image/bg-building.png';
 
 export {
     logo,
@@ -47,5 +48,6 @@ export {
     courseHeaderBanner,
     editProfileUser,
     internshipPersonImage,
-    emptyDataIlustrationInternship
+    emptyDataIlustrationInternship,
+    bgHeroBuilding,
 }
