@@ -41,7 +41,7 @@ function Navbar() {
             <NavbarMobileBtn/>
 
             {isLogin ? <div className="hidden lg:gap-3 lg:flex lg:items-center">
-                <Link href={"/dashboard/profile"}>
+                <Link href={"/dashboard/training"}>
                     <button className="px-[30px] py-[10px] text-white bg-primary rounded-xl">
                         Dashboard
                     </button>

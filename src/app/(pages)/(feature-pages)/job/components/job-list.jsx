@@ -1,8 +1,9 @@
 import Image from "next/image";
 import {iconArrowDown, iconFilter} from "@/app/lib/utils/icon";
 import {jobImage} from "@/app/lib/utils/images";
+import job from "@/app/lib/services/job";
 
-function JobList() {
+async function JobList() {
 
     const dataDummy = [
         {
@@ -57,6 +58,9 @@ function JobList() {
         }
     ]
 
+    const fetchJob = await job()
+    console.log(fetchJob)
+
     return (
         <div className="w-full h-full">
             <div className="flex w-full justify-between items-center mb-5">
@@ -68,15 +72,15 @@ function JobList() {
                 </div>
 
             </div>
-            {dataDummy.map((item, index) => (
+            {fetchJob.map((item, index) => (
                 <div className="w-full  bg-white border border-colorBorder rounded-md p-6 mb-4">
                     <div className="flex">
                         <Image className="w-[70px] h-[70px] me-5" src={jobImage} alt="Job Image" width={100} height={100}/>
                         <div className="flex flex-col gap-3">
-                            <h1 className="text-lg text-textPrimary">Linear Company</h1>
-                            <h1 className="font-semibold text-textPrimary text-2xl">FrontEnd Developer</h1>
+                            <h1 className="text-lg text-textPrimary">{item.company_name}</h1>
+                            <h1 className="font-semibold text-textPrimary text-2xl">{item.jobdesk}</h1>
                             <div className="flex  w-[80%] justify-between text-sm">
-                                <h1>London</h1>
+                                <h1>{item.location}</h1>
                                 <p>-</p>
                                 <h1>Full Time</h1>
                                 <p>-</p>
