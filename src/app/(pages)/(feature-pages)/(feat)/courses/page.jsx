@@ -1,9 +1,10 @@
 import React from 'react';
-import CourseHeader from "@/app/(pages)/(feature-pages)/courses/components/header";
-import SearchBarCourses from "@/app/(pages)/(feature-pages)/courses/components/search-bar";
+
 import Image from "next/image";
 import {courseHeaderBanner} from "@/app/lib/utils/images";
 import course from "@/app/lib/services/course";
+import CourseHeader from "@/app/(pages)/(feature-pages)/(feat)/courses/components/header";
+import SearchBarCourses from "@/app/(pages)/(feature-pages)/(feat)/courses/components/search-bar";
 
 async function Page() {
     const data = [

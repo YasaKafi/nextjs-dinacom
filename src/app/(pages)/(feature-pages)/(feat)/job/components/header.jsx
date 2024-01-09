@@ -1,5 +1,5 @@
 import Image from "next/image";
-import jobFilter from "@/app/(pages)/(feature-pages)/job/components/job-filter";
+
 import {jobHeaderIllustration, notebook} from "@/app/lib/utils/icon";
 
 export default function Header() {

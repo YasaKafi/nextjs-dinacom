@@ -1,19 +1,11 @@
 
 import Image from "next/image";
 import Form from "@/app/(pages)/(initial-pages)/components/form";
-import login from "@/app/lib/services/login";
-import icons, {iconGoogle} from "@/app/lib/utils/icon";
+import {iconGoogle} from "@/app/lib/utils/icon";
 
 
 
 export default  function LoginPage() {
-    //
-    //
-    // async function handleLogin() {
-    //     const fetchLogin = await login()
-    //     console.log(fetchLogin)
-    // }
-
 
     return (
         <main className="h-screen w-screen flex flex-col items-center px-8 py-10 lg:flex-row-reverse lg:py-0 lg:px-0">

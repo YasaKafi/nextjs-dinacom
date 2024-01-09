@@ -1,9 +1,10 @@
-import InternshipHeader from "@/app/(pages)/(feature-pages)/internship/components/header";
-import SearchBarCourses from "@/app/(pages)/(feature-pages)/courses/components/search-bar";
+
 import Image from "next/image";
 import {courseHeaderBanner, jobImage} from "@/app/lib/utils/images";
 import React from "react";
 import {iconCompany} from "@/app/lib/utils/icon";
+import InternshipHeader from "@/app/(pages)/(feature-pages)/(feat)/internship/components/header";
+import SearchBarCourses from "@/app/(pages)/(feature-pages)/(feat)/courses/components/search-bar";
 
 function Page() {
 
