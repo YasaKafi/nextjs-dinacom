@@ -1,7 +1,6 @@
 import ProfileHeader from "@/app/(pages)/dashboard/profile/components/profile-header";
 import ProfileAbout from "@/app/(pages)/dashboard/profile/components/profile-about";
-import ProfileTrainingDetail
-    from "@/app/(pages)/(feature-pages)/profile/components/profile-training-detail/profile-training-detail";
+import ProfileTrainingDetail from "../../(feature-pages)/(feat)/profile/components/profile-training-detail/page";
 
 function Page() {
     return (
