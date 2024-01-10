@@ -1,6 +1,6 @@
 import React from "react";
 import { LuClock4 } from "react-icons/lu";
-import "../../../../../globals.css";
+import "../../../../../../globals.css";
 import { HiBadgeCheck } from "react-icons/hi";
 import Image from "next/image";
 import ButtonApply from "../components/button";

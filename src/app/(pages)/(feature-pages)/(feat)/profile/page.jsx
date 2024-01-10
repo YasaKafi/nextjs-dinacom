@@ -2,6 +2,7 @@ import ProfileSection from "@/app/(pages)/(feature-pages)/(feat)/profile/compone
 import ProfileTrainingDetail
     from "@/app/(pages)/(feature-pages)/(feat)/profile/components/profile-training-detail/profile-training-detail";
 
+
 function ProfilePage() {
     return (
         <>
