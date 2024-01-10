@@ -26,7 +26,10 @@ export default function MainSideBar() {
     >
       <div className="w-full h-[13%] flex flex-row px-8 justify-between items-center">
         <div className="flex-row h-auto items-center justify-start flex ">
-          <a href="/" className="font-montserrat text-lg  text-blue-400 font-semibold pr-4 cursor-pointer ">
+          <a
+            href="/"
+            className="font-montserrat text-lg  text-blue-400 font-semibold pr-4 cursor-pointer "
+          >
             Smart Carrier
           </a>
           <Image src={smarthomeLogo} alt="" />
@@ -43,20 +46,26 @@ export default function MainSideBar() {
         <div className="w-full flex flex-col">
           <h2 className="text-sm font-medium">MENU UTAMA</h2>
           <ul className="w-full mt-4">
-            <li className="flex justify-start items-center hover:bg-blue-200 hover:text-blue-800 rounded-xl p-4 cursor-pointer">
+            <li className="flex justify-start items-center hover:bg-blue-200 hover:text-white rounded-xl p-4 cursor-pointer">
               <SiGitbook className="mr-4" size={25} />
-              <Link href="/dashboard/training" className="text-base font-normal">
+              <Link
+                href="/dashboard/training"
+                className="text-base font-normal"
+              >
                 Pelatihan
               </Link>
             </li>
 
-            <li className="flex justify-start items-center hover:bg-blue-200 hover:text-blue-800 rounded-xl p-4 cursor-pointer">
+            <li className="flex justify-start items-center hover:bg-blue-200 hover:text-white rounded-xl p-4 cursor-pointer">
               <PiSuitcaseSimple className="mr-4" size={25} />
-              <Link href="/dashboard/internship" className="text-base font-normal">
+              <Link
+                href="/dashboard/internship"
+                className="text-base font-normal"
+              >
                 Magang
               </Link>
             </li>
-            <li className="flex justify-start items-center hover:bg-blue-200 hover:text-blue-800 rounded-xl p-4 cursor-pointer">
+            <li className="flex justify-start items-center hover:bg-blue-200 hover:text-white rounded-xl p-4 cursor-pointer">
               <AiOutlineMail className="mr-4" size={25} />
               <Link href="/contact-us" className="text-base font-normal">
                 Inbox
@@ -67,20 +76,12 @@ export default function MainSideBar() {
         <div className="w-full flex flex-col mt-8">
           <h2 className="text-sm font-medium">MENU LAINNYA</h2>
           <ul className="w-full mt-4">
-            <li className="flex justify-start items-center hover:bg-blue-200 hover:text-blue-800 rounded-xl p-4 cursor-pointer">
+            <li className="flex justify-start items-center hover:bg-blue-200 hover:text-white active:bg-blue-200 rounded-xl p-4 cursor-pointer">
               <FaRegUser className="mr-4" size={25} />
               <Link href="/dashboard/profile" className="text-base font-normal">
                 Profil Pengguna
               </Link>
             </li>
-
-            <li className="flex justify-start items-center hover:bg-blue-200 hover:text-blue-800 rounded-xl p-4 cursor-pointer">
-              <IoSettingsOutline className="mr-4" size={25} />
-              <Link href="/about-us" className="text-base font-normal">
-                Pengaturan
-              </Link>
-            </li>
-            
           </ul>
         </div>
       </div>

@@ -8,7 +8,6 @@ import { useSidebar } from "./SidebarContext";
 import { IoIosArrowDown } from "react-icons/io";
 import { usePathname } from "next/navigation";
 export default function MainHeader() {
-  
   const [isSideBarOpen, toggleSidebar] = useSidebar();
 
   const handleMenuClick = () => {
@@ -24,6 +23,8 @@ export default function MainHeader() {
         return "Progress Magang";
       case "/dashboard/profile":
         return "Profil Pengguna";
+      case "/dashboard/profile/edit":
+        return "Edit Profil";
       default:
         return "";
     }
