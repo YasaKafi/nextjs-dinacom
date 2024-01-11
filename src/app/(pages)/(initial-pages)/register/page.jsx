@@ -7,7 +7,7 @@ export default function RegisterPage() {
   return (
     <main>
       <div className="w-full h-screen flex flex-row ">
-        <div className="hidden lg:w-full lg:h-full lg:flex lg:justify-center lg:items-center bg-gradient-to-b from-sky-400 to-blue-900 ">
+        <div className="hidden lg:w-full lg:h-full lg:flex lg:justify-center lg:items-center bg-gradient-to-b from-blue-400 to-blue-900 ">
           <Image src={registerIllustration} alt="Register Illustration" className="px-5" />
         </div>
         <div className="w-full h-screen  flex flex-col px-8 sm:px-24 lg:px-36 py-8">
