@@ -56,6 +56,12 @@ const features = [
 ];
 
 const MainComponent = () => {
+  const [expanded, setExpanded] = React.useState(false);
+
+  const handleChange = (panel) => (event, isExpanded) => {
+    setExpanded(isExpanded ? panel : false);
+  };
+
   return (
     <ThemeProvider theme={theme}>
       <div className="w-full h-[80vh]">
@@ -66,7 +72,7 @@ const MainComponent = () => {
             </h1>
             <div className="w-full h-full  ">
               {courseData.map((course, index) => (
-                <Accordion key={index}>
+                <Accordion key={index} expanded={expanded === `panel${index + 1}`} onChange={handleChange(`panel${index + 1}`)}>
                   <AccordionSummary
                     style={{ backgroundColor: "#f0f0f0" }}
                     expandIcon={<IoIosArrowDropdownCircle size={25} />}
