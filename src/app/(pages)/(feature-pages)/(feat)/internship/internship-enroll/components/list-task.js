@@ -140,7 +140,7 @@ function ListTask() {
                                 <AccordionDetails>
                                     <div className="flex flex-col w-full h-full gap-4">
                                         {course.tasks.map((task, index) => (
-                                            <div className="flex flex-row w-full h-[100px] gap-4">
+                                            <div key={index} className="flex flex-row w-full h-[100px] gap-4">
                                                 <div className="w-[100px] h-[100px] bg-[#F8FBF9] rounded-xl flex items-center justify-center">
                                                     <img src={task.image} alt="course image"/>
                                                 </div>

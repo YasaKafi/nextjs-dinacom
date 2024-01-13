@@ -182,7 +182,7 @@ const MainComponent = () => {
                                   style={{ display: "none" }}
                                 />
                                 {previewURL && (
-                                  <img src={previewURL} className="w-96" alt="Preview" />
+                                  <Image src={previewURL} className="w-96" alt="Preview" />
                                 )}
 
                                 <div

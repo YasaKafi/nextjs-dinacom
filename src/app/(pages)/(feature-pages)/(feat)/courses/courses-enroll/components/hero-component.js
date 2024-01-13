@@ -8,7 +8,7 @@ import Image from "next/image";
 const HeroComponent = () => {
   return (
     <div className="w-full h-[60vh] relative bg-yellow-50">
-      <Image src={bgHeroBuilding} className="w-full h-full" />
+      <Image src={bgHeroBuilding} className="w-full h-full" alt="Hero Courses Enroll" />
       <div className="absolute top-32 left-20 w-1/2 text-white flex flex-col gap-6">
         <h1 className="font-semibold text-5xl ">Business and Management</h1>
         <p className="font-normal">
