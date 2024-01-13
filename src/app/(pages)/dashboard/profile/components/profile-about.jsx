@@ -31,7 +31,7 @@ function ProfileAbout() {
             <h1 className="font-bold text-textPrimary text-xl">Tentang Saya</h1>
             <ul>
                 {biodata.map((item, index) => (
-                    <div className="flex flex-col my-4">
+                    <div key={index} className="flex flex-col my-4">
                         <div className="flex gap-2 mb-2">
                             <Image src={item.icon} alt="Icon Search" width={25} height={25}/>
                             <h3>{item.value}</h3>

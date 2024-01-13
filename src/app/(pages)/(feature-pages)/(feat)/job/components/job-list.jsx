@@ -73,7 +73,7 @@ async function JobList() {
 
             </div>
             {fetchJob.map((item, index) => (
-                <div className="w-full  bg-white border border-colorBorder rounded-md p-6 mb-4">
+                <div key={index} className="w-full  bg-white border border-colorBorder rounded-md p-6 mb-4">
                     <div className="flex">
                         <Image className="w-[70px] h-[70px] me-5" src={jobImage} alt="Job Image" width={100} height={100}/>
                         <div className="flex flex-col gap-3">

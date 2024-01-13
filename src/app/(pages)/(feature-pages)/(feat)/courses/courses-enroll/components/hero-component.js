@@ -14,7 +14,7 @@ const HeroComponent = () => {
         <p className="font-normal">
           This (Hons) Business and Management BSc course from University of
           Essex Online will help you adapt to the ever-changing world of
-          business. We'll examine a range of real-world business examples and
+          business. We&apos;ll examine a range of real-world business examples and
           use them to develop the broad skillset that a good manager should be
           able to draw from.
         </p>
