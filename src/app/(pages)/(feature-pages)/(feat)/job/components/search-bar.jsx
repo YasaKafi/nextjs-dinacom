@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from "next/image";
-import {iconLocation, iconSearch} from "@/app/lib/utils/icon";
+import {iconLocation, iconSearch} from "@/app/lib/utils/svg";
 
 function SearchBar() {
     return (

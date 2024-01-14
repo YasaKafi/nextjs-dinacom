@@ -1,5 +1,5 @@
 import Image from "next/image";
-import {iconArrowDown, iconFilter} from "@/app/lib/utils/icon";
+import {iconArrowDown, iconFilter} from "@/app/lib/utils/svg";
 import {jobImage} from "@/app/lib/utils/images";
 import job from "@/app/lib/services/job";
 

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import {userProfileNavbar} from "@/app/lib/utils/images";
-import {iconExit, iconHamburger} from "@/app/lib/utils/icon";
+import {iconExit, iconHamburger} from "@/app/lib/utils/svg";
 import {useState} from "react";
 
 function NavbarMobileBtn() {

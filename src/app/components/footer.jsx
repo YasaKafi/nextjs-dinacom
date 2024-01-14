@@ -1,6 +1,6 @@
 import Image from "next/image";
 import {smarthomeLogo} from "@/app/lib/utils/images";
-import {iconFacebookWhite, iconInstagramWhite, iconTwitterWhite} from "@/app/lib/utils/icon";
+import {iconFacebookWhite, iconInstagramWhite, iconTwitterWhite} from "@/app/lib/utils/svg";
 
 function Footer() {
     return (

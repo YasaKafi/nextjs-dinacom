@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from "next/image";
-import {iconArrowDown, iconLocation, iconSearch} from "@/app/lib/utils/icon";
+import {iconArrowDown, iconLocation, iconSearch} from "@/app/lib/utils/svg";
 
 function SearchBarCourses() {
     return (

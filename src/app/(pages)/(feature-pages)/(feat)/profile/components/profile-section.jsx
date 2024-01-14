@@ -1,6 +1,6 @@
 import Image from "next/image";
 import {userProfile} from "@/app/lib/utils/images";
-import {iconEdit} from "@/app/lib/utils/icon";
+import {iconEdit} from "@/app/lib/utils/svg";
 
 function ProfileSection() {
     return (

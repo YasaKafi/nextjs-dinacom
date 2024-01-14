@@ -1,5 +1,5 @@
 import Image from "next/image";
-import {iconSearch, jobHeaderIllustration} from "@/app/lib/utils/icon";
+import {iconSearch, jobHeaderIllustration} from "@/app/lib/utils/svg";
 
 function ProfileAbout() {
 
