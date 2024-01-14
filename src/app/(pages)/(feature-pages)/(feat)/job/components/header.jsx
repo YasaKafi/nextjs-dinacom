@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import {jobHeaderIllustration, notebook} from "@/app/lib/utils/icon";
+import {jobHeaderIllustration, notebook} from "@/app/lib/utils/svg";
 
 export default function Header() {
     return (

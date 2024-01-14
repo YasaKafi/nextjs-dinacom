@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from "next/image";
-import {iconEducation, iconGlobe} from "@/app/lib/utils/icon";
+import {iconEducation, iconGlobe} from "@/app/lib/utils/svg";
 import {landingSmartcarrierImage} from "@/app/lib/utils/images";
 
 function LandingSmartCarrier() {

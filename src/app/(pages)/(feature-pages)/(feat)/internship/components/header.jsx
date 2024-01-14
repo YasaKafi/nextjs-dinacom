@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 import {internshipPersonImage} from "@/app/lib/utils/images";
-import {iconCompany, internshipBanner} from "@/app/lib/utils/icon";
+import {iconCompany, internshipBanner} from "@/app/lib/utils/svg";
 
 function InternshipHeader() {
     return (

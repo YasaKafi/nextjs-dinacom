@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from "next/image";
 import {landingFeatIllustration} from "@/app/lib/utils/images";
-import {iconCheck, landingFeatImage, topDecoration} from "@/app/lib/utils/icon";
+import {iconCheck, landingFeatImage, topDecoration} from "@/app/lib/utils/svg";
 
 function LandingFeature() {
     const listFeature = [

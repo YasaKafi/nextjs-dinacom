@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import register from "@/app/lib/services/register";
-import { iconGoogle } from "@/app/lib/utils/icon";
+import { iconGoogle } from "@/app/lib/utils/svg";
 import { IoIosEye, IoIosEyeOff } from "react-icons/io";
 import Image from "next/image";
 

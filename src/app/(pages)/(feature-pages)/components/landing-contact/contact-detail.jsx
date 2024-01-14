@@ -1,6 +1,6 @@
 import Image from "next/image";
 import {googleMap} from "@/app/lib/utils/images";
-import {iconFacebook, iconLinkedin, iconLocation, iconMail, iconPhone, iconTwitter} from "@/app/lib/utils/icon";
+import {iconFacebook, iconLinkedin, iconLocation, iconMail, iconPhone, iconTwitter} from "@/app/lib/utils/svg";
 
 function ContactDetail() {
     return (

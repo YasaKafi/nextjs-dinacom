@@ -2,7 +2,7 @@
 
 import {userTestimony} from "@/app/lib/utils/images";
 import Image from "next/image";
-import {arrowPrimary, arrowWhite, iconStar} from "@/app/lib/utils/icon";
+import {arrowPrimary, arrowWhite, iconStar} from "@/app/lib/utils/svg";
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";

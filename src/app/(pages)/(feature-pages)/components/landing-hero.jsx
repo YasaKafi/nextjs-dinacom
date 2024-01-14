@@ -1,6 +1,6 @@
 import Image from "next/image";
 import {landingHeroImage} from "@/app/lib/utils/images";
-import {brainDecoration} from "@/app/lib/utils/icon";
+import {brainDecoration} from "@/app/lib/utils/svg";
 
 function LandingHero() {
     return (

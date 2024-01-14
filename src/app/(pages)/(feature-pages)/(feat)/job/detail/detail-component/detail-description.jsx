@@ -72,11 +72,11 @@ export default async function DetailDescription() {
             </div>
             <div className="mt-6 flex flex-col">
               <h2 className="box-detail-h2">Jobdesk</h2>
-              <h3 className="lg:text-lg text-base">{jobData.jobdesk}</h3>
+              {/*<h3 className="lg:text-lg text-base">{jobData.jobdesk}</h3>*/}
             </div>
             <div className="mt-6 flex flex-col">
               <h2 className="box-detail-h2">Tipe Pekerjaan</h2>
-              <h3 className="lg:text-lg text-base">{jobData.type_job}</h3>
+              {/*<h3 className="lg:text-lg text-base">{jobData.type_job}</h3>*/}
             </div>
             <div className="mt-6 flex flex-col">
               <h2 className="box-detail-h2">Gaji</h2>
@@ -101,17 +101,17 @@ export default async function DetailDescription() {
                     <h3>Rakamin</h3>
                   </div>
                 </div>
-                <Image
-                  src={jobData.company_image}
-                  alt="backgroundDetail"
-                  priority
-                  className="object-cover w-[15%] md:w-[15%] border-2 border-gray-300 rounded-lg"
-                ></Image>
+                {/*<Image*/}
+                {/*  src={jobData.company_image}*/}
+                {/*  alt="backgroundDetail"*/}
+                {/*  priority*/}
+                {/*  className="object-cover w-[15%] md:w-[15%] border-2 border-gray-300 rounded-lg"*/}
+                {/*></Image>*/}
               </div>
               <div className="flex flex-row w-full mt-4 justify-between">
                 <div className="flex flex-col">
                   <h3>Lokasi</h3>
-                  <h3>{jobData.location}</h3>
+                  {/*<h3>{jobData.location}</h3>*/}
                 </div>
                 <div className="flex items-center py-1 bg-blue-300 px-2 rounded-lg">
                   <h3 className="text-sm text-white">hybird</h3>

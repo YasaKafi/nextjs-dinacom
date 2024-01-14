@@ -2,7 +2,7 @@
 import Image from "next/image";
 import {courseHeaderBanner, jobImage} from "@/app/lib/utils/images";
 import React from "react";
-import {iconCompany} from "@/app/lib/utils/icon";
+import {iconCompany} from "@/app/lib/utils/svg";
 import InternshipHeader from "@/app/(pages)/(feature-pages)/(feat)/internship/components/header";
 import SearchBarCourses from "@/app/(pages)/(feature-pages)/(feat)/courses/components/search-bar";
 
@@ -66,7 +66,7 @@ function Page() {
                 <div className="h-full grid grid-cols-3 gap-5 mt-10">
 
                     {data.map((item, index) => (
-                        <div className="rounded-xl  bg-white overflow-hidden mb-5 p-6 flex gap-5">
+                        <div key={index} className="rounded-xl  bg-white overflow-hidden mb-5 p-6 flex gap-5">
 
                             <div className="w-[70px] h-[70px] border border-colorBorder rounded-md overflow-hidden">
                                 <Image className="w-full h-full object-cover" src={jobImage} alt="Icon Company"

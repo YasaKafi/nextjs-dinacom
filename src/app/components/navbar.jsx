@@ -1,6 +1,6 @@
 import Image from "next/image";
 import {avatarUser, smarthomeLogo, userProfileNavbar} from "@/app/lib/utils/images";
-import {iconHamburger} from "@/app/lib/utils/icon";
+import {iconHamburger} from "@/app/lib/utils/svg";
 import NavbarMobileBtn from "@/app/components/navbar-mobile-btn";
 import Link from "next/link";
 import React from "react";

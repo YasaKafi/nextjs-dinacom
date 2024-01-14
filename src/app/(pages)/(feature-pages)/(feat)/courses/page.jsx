@@ -69,7 +69,7 @@ async function Page() {
                 <div className="h-full grid grid-cols-4 gap-5 mt-10">
 
                     {fetchCourse.map((item,index)=> (
-                        <div className="rounded-xl h-[400px] bg-white overflow-hidden mb-5">
+                        <div key={index} className="rounded-xl h-[400px] bg-white overflow-hidden mb-5">
 
                             <Image className="w-full h-[130px] object-cover" src={item.image_course} alt="Course Header Banner"
                                    width={300} height={300}/>

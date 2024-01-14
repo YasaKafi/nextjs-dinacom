@@ -13,6 +13,7 @@ import { GoCheckCircleFill } from "react-icons/go";
 import CardSubab from "./card-subab-courses";
 import { RiLock2Line } from "react-icons/ri";
 import { FiUploadCloud } from "react-icons/fi";
+import  Image  from "next/image";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -182,7 +183,7 @@ const MainComponent = () => {
                                   style={{ display: "none" }}
                                 />
                                 {previewURL && (
-                                  <img src={previewURL} className="w-96" alt="Preview" />
+                                  <Image src={previewURL} className="w-96" alt="Preview" />
                                 )}
 
                                 <div

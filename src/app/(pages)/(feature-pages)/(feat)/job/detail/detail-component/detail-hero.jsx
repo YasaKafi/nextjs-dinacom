@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { bgHeroDetail } from "@/app/lib/utils/icon";
+import { bgHeroDetail } from "@/app/lib/utils/svg";
 import ButtonHero from "../components/button";
 import { logoCompany } from "@/app/lib/utils/images";
 
