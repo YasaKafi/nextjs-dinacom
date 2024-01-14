@@ -35,6 +35,9 @@ function Navbar() {
                     <li>
                         <Link href={"/job"} className="text-base">Pekerjaan</Link>
                     </li>
+                    <li>
+                        <Link href={"/article"} className="text-base">Artikel</Link>
+                    </li>
                 </ul>
             </div>
 
