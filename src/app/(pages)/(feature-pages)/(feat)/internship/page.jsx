@@ -5,8 +5,10 @@ import React from "react";
 import {iconCompany} from "@/app/lib/utils/svg";
 import InternshipHeader from "@/app/(pages)/(feature-pages)/(feat)/internship/components/header";
 import SearchBarCourses from "@/app/(pages)/(feature-pages)/(feat)/courses/components/search-bar";
+import internship from "@/app/lib/services/internship";
 
-function Page() {
+export default async function Page() {
+    const internshipData = await internship()
 
     const data = [
         {
@@ -65,7 +67,7 @@ function Page() {
                 <SearchBarCourses/>
                 <div className="h-full grid grid-cols-3 gap-5 mt-10">
 
-                    {data.map((item, index) => (
+                    {internshipData.map((item, index) => (
                         <div key={index} className="rounded-xl  bg-white overflow-hidden mb-5 p-6 flex gap-5">
 
                             <div className="w-[70px] h-[70px] border border-colorBorder rounded-md overflow-hidden">
@@ -90,4 +92,3 @@ function Page() {
     );
 }
 
-export default Page;
