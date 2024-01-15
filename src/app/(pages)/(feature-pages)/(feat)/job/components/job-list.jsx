@@ -2,6 +2,7 @@ import Image from "next/image";
 import {iconArrowDown, iconFilter} from "@/app/lib/utils/svg";
 import {jobImage} from "@/app/lib/utils/images";
 import job from "@/app/lib/services/job";
+import jobDetail from "@/app/lib/services/jobDetail";
 
 async function JobList() {
 
@@ -60,6 +61,7 @@ async function JobList() {
 
     const fetchJob = await job()
     console.log(fetchJob)
+    
 
     return (
         <div className="w-full h-full">
