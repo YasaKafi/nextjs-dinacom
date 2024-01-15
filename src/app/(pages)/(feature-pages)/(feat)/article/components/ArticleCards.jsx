@@ -13,7 +13,7 @@ const ArticleCards = ({ category, date, title, description, imageUrl }) => {
     <div className=' flex w-[970px] justify-between '>
       <div className='flex flex-col gap-6 w-[610px]'>
         <div className='flex flex-row gap-2 items-center'>
-          <h1 className='font-semibold font-montserrat bg-primary px-[12px] py-[9px] text-white rounded-md'>{category}</h1>
+          <h1 className='font-semibold font-montserrat bg-blue-300 px-[12px] py-[9px] text-white rounded-md'>{category}</h1>
           <h2 className='font-montserrat'>{date}</h2>
         </div>
         <div>
