@@ -2,7 +2,7 @@ import React from 'react';
 
 import Image from "next/image";
 import {courseHeaderBanner} from "@/app/lib/utils/images";
-import course from "@/app/lib/services/course";
+import course from "@/app/lib/services/endpoint/api/course";
 import CourseHeader from "@/app/(pages)/(feature-pages)/(feat)/courses/components/header";
 import SearchBarCourses from "@/app/(pages)/(feature-pages)/(feat)/courses/components/search-bar";
 
