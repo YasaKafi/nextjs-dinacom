@@ -1,8 +1,25 @@
-import React from 'react';
+"use client"
+
+import React, {useEffect, useState} from 'react';
 import Image from "next/image";
 import {iconLocation, iconSearch} from "@/app/lib/utils/svg";
+import {useRouter} from "next/navigation";
+import {useDebounce} from "use-debounce";
 
 function SearchBar() {
+    const router = useRouter()
+    const [searchQuery, setSearchQuery] = useState('');
+    const [query] = useDebounce(searchQuery, 500);
+
+    useEffect(() => {
+        if (searchQuery) {
+            router.push(`/job?search=${searchQuery}`)
+        } else {
+            router.push(`/job`)
+        }
+    }, [query, router]);
+
+
     return (
         <div className="w-full h-[50px] flex">
             <div className="w-full h-6 relative">
@@ -13,6 +30,8 @@ function SearchBar() {
                 <input className="w-full h-6 border border-colorBorder p-6 ps-16 rounded-l-lg absolute"
                        type="text"
                        placeholder="Sedang mencari posisi apa?"
+                       value={searchQuery}
+                       onChange={(e) => setSearchQuery(e.target.value)}
                 />
             </div>
 
