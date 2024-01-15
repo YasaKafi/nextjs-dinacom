@@ -4,7 +4,7 @@ import getUser from "@/app/lib/services/endpoint/auth/get-user";
 
 export default async function ProfileHeader() {
 
-    const dataUser = await getUser()
+    const dataUser = await getUser("eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vOTEzOC0xODItMi00NS0yNS5uZ3Jvay1mcmVlLmFwcC9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTcwNTI4NjMzMSwiZXhwIjoxNzA1Mjg5OTMxLCJuYmYiOjE3MDUyODYzMzEsImp0aSI6Im9mUktwN3ByUnF0Q0NoV2siLCJzdWIiOiI2IiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.GvRGl7z6_gtn1_pv8vUYgkFqN7-GHTFV--InkVvjWUk")
 
     const roleDefault = dataUser.role === "" ? "(Belum memiliki posisi)" : dataUser.role
 
