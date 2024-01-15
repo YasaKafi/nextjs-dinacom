@@ -6,6 +6,7 @@ import {iconCompany} from "@/app/lib/utils/svg";
 import InternshipHeader from "@/app/(pages)/(feature-pages)/(feat)/internship/components/header";
 import SearchBarCourses from "@/app/(pages)/(feature-pages)/(feat)/courses/components/search-bar";
 import internship from "@/app/lib/services/endpoint/api/internship";
+import SearchBarInternship from "@/app/(pages)/(feature-pages)/(feat)/internship/components/search-bar";
 
 export default async function Page() {
     const internshipData = await internship()
@@ -14,7 +15,7 @@ export default async function Page() {
         <div className="w-screen bg-gray-100">
             <InternshipHeader/>
             <div className=" px-[90px]">
-                <SearchBarCourses/>
+                <SearchBarInternship/>
                 <div className="h-full grid grid-cols-3 gap-5 mt-10">
 
                     {internshipData.map((item, index) => (
