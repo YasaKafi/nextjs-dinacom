@@ -1,19 +1,15 @@
 import Image from "next/image";
 import {iconArrowDown, iconFilter} from "@/app/lib/utils/svg";
-import {jobImage} from "@/app/lib/utils/images";
 import job from "@/app/lib/services/endpoint/api/job";
 import Link from "next/link";
 
-async function JobList() {
+async function JobList({data}) {
 
-    const fetchJob = await job()
-    console.log(fetchJob)
-    
 
     return (
         <div className="w-full h-full">
             <div className="flex w-full justify-between items-center mb-5">
-                <h1 className="font-bold text-[32px] text-textPrimary">3177 Pekerjaan</h1>
+                <h1 className="font-bold text-[32px] text-textPrimary">{data.length} Pekerjaan</h1>
                 <div className="w-1/4 flex border border-colorBorder px-4 py-3 gap-3 rounded-lg">
                     <Image src={iconFilter} alt="Icon Filter" width={20} height={20}/>
                     <h1>Filter</h1>
@@ -21,11 +17,12 @@ async function JobList() {
                 </div>
 
             </div>
-            {fetchJob.map((item, index) => (
+            {data.map((item, index) => (
+
                 <Link href={`/job/${item.id}`}>
                     <div key={index} className="w-full  bg-white border border-colorBorder rounded-md p-6 mb-4">
                         <div className="flex">
-                            <Image className="w-[70px] h-[70px] me-5" src={jobImage} alt="Job Image" width={100}
+                            <Image className="w-[70px] h-[70px] me-5" src={item.company_image} alt="Job Image" width={100}
                                    height={100}/>
                             <div className="flex flex-col gap-3">
                                 <h1 className="text-lg text-textPrimary">{item.company_name}</h1>
