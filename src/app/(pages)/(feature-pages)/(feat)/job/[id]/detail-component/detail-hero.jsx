@@ -1,7 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import { bgHeroDetail } from "@/app/lib/utils/svg";
-import jobDetail from "@/app/lib/services/jobDetail";
+import jobDetail from "@/app/lib/services/endpoint/api/job-detail";
+
 
 async function getDataJob() {
   const jobData = await jobDetail(2);
@@ -15,7 +16,7 @@ export default async function DetailHero() {
       <Image
         src={bgHeroDetail}
         alt="backgroundDetail"
-        
+
         priority
         className="object-cover w-full h-[300px]"
       ></Image>
