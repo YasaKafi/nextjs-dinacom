@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import register from "@/app/lib/services/register";
+import register from "@/app/lib/services/endpoint/auth/register";
 import { iconGoogle } from "@/app/lib/utils/svg";
 import { IoIosEye, IoIosEyeOff } from "react-icons/io";
 import Image from "next/image";

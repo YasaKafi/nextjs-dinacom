@@ -4,7 +4,7 @@ import "../../../../../../globals.css";
 import { HiBadgeCheck } from "react-icons/hi";
 import Image from "next/image";
 import ButtonApply from "../components/button";
-import jobDetail from "@/app/lib/services/jobDetail";
+import jobDetail from "@/app/lib/services/endpoint/api/job-detail";
 
 async function getDataJob() {
   const jobData = await jobDetail(2);

@@ -1,8 +1,7 @@
 import Image from "next/image";
 import {iconArrowDown, iconFilter} from "@/app/lib/utils/svg";
 import {jobImage} from "@/app/lib/utils/images";
-import job from "@/app/lib/services/job";
-import jobDetail from "@/app/lib/services/jobDetail";
+import job from "@/app/lib/services/endpoint/api/job";
 
 async function JobList() {
 

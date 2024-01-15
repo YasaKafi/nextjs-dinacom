@@ -1,4 +1,4 @@
-import instanceAxios from "@/app/lib/services/instanceAxios";
+import instanceAxios from "@/app/lib/services/instance/instance";
 
 export default async function course() {
     try {

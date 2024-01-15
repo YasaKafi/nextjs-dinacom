@@ -1,33 +1,42 @@
 import Image from "next/image";
 import {iconSearch, jobHeaderIllustration} from "@/app/lib/utils/svg";
+import getUser from "@/app/lib/services/endpoint/auth/get-user";
 
-function ProfileAbout() {
+export default async function ProfileAbout() {
+
+    const dataUser = await getUser("eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vOTEzOC0xODItMi00NS0yNS5uZ3Jvay1mcmVlLmFwcC9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTcwNTI4NjMzMSwiZXhwIjoxNzA1Mjg5OTMxLCJuYmYiOjE3MDUyODYzMzEsImp0aSI6Im9mUktwN3ByUnF0Q0NoV2siLCJzdWIiOiI2IiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.GvRGl7z6_gtn1_pv8vUYgkFqN7-GHTFV--InkVvjWUk")
+
+    const gender = dataUser.gender === 0 ? "Laki-laki" : dataUser.gender === 1 ?  "Perempuan" : "Lainnya"
+
+    function dataEmpty(data, message) {
+        return data === "" || data === null ? message : data
+    }
 
     const biodata = [
         {
             icon: jobHeaderIllustration,
-            value: "Laki-laki",
+            value: gender,
         },
         {
             icon: jobHeaderIllustration,
-            value: "Lahir Juni 26, 1980",
+            value: dataEmpty(dataUser.birthdate, "Tanggal Lahir belum terisi"),
         },
         {
             icon: jobHeaderIllustration,
-            value: "Jawir Selatan",
+            value: dataEmpty(dataUser.city + dataUser.province, "Tanggal Lahir belum terisi"),
         },
         {
             icon: jobHeaderIllustration,
-            value: "fadza@gmail.com",
+            value: dataEmpty(dataUser.email, "Tanggal Lahir belum terisi"),
         },
         {
             icon: jobHeaderIllustration,
-            value: "33757005467",
+            value: dataEmpty(dataUser.no_hp, "Tanggal Lahir belum terisi"),
         }
     ]
 
     return (
-        <div className="bg-white w-1/4 h-full border border-colorBorder rounded-xl px-4 py-5">
+        <div className="bg-white w-[33%] h-full border border-colorBorder rounded-xl px-4 py-5">
             <h1 className="font-bold text-textPrimary text-xl">Tentang Saya</h1>
             <ul>
                 {biodata.map((item, index) => (
@@ -45,5 +54,3 @@ function ProfileAbout() {
         </div>
     );
 }
-
-export default ProfileAbout;
