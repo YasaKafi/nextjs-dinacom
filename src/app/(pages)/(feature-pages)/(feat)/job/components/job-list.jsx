@@ -60,6 +60,7 @@ async function JobList() {
 
     const fetchJob = await job()
     console.log(fetchJob)
+    
 
     return (
         <div className="w-full h-full">

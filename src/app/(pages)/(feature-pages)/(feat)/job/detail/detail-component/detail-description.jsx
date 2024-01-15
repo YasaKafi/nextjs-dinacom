@@ -6,25 +6,14 @@ import Image from "next/image";
 import ButtonApply from "../components/button";
 import jobDetail from "@/app/lib/services/endpoint/api/job-detail";
 
-const responsibilities = [
-  "Fokus pada pengelolaan dan pemrosesan data termasuk perencanaan data, visualisasi, data besar, atau analitik.",
-  "Meningkatkan efisiensi sistem dengan berkonsultasi dengan pengguna akhir dan memberikan solusi inovatif.",
-  "Memahami konsep penganggaran perencanaan, dan spesifikasi fungsional, mengembangkan dan mengimplementasikan solusi, dan melakukan pengujian.",
-  "Menganalisis dan meningkatkan kinerja teknologi.",
-  "Menyelesaikan kesalahan yang dicatat, serta memastikan keamanan dan enkripsi sistem.",
-  "Mendokumentasikan proses dan memantau metrik kinerja sistem.",
-  "Berkolaborasi dan berpartisipasi dalam implementasi proyek dan berbagai upaya yang berfokus pada kebutuhan bisnis.",
-];
-
-
 async function getDataJob() {
-  const jobData = await jobDetail();
+  const jobData = await jobDetail(2);
   return jobData.data;
 }
 
 export default async function DetailDescription() {
   const jobData = await getDataJob();
-  
+
   return (
     <div className="w-full flex flex-col justify-start px-6 lg:px-24">
       <h1 className="w-full text-xl lg:text-3xl font-semibold mt-8 lg:mt-12">
@@ -37,7 +26,7 @@ export default async function DetailDescription() {
               Anda akan bertanggung jawab :
             </h2>
             <ul className="mt-4">
-              {responsibilities.map((item, index) => (
+              {jobData.jobdesk_description.map((item, index) => (
                 <li
                   key={index}
                   className="list-disc ml-4 text-xs md:text-sm lg:text-base"
@@ -52,7 +41,7 @@ export default async function DetailDescription() {
               Persyaratan :
             </h2>
             <ul className="mt-4">
-              {responsibilities.map((item, index) => (
+              {jobData.jobdesk_requirement.map((item, index) => (
                 <li
                   key={index}
                   className="list-disc ml-4 text-xs md:text-sm lg:text-base"
@@ -72,11 +61,11 @@ export default async function DetailDescription() {
             </div>
             <div className="mt-6 flex flex-col">
               <h2 className="box-detail-h2">Jobdesk</h2>
-              {/*<h3 className="lg:text-lg text-base">{jobData.jobdesk}</h3>*/}
+              <h3 className="lg:text-lg text-base">{jobData.jobdesk}</h3>
             </div>
             <div className="mt-6 flex flex-col">
               <h2 className="box-detail-h2">Tipe Pekerjaan</h2>
-              {/*<h3 className="lg:text-lg text-base">{jobData.type_job}</h3>*/}
+              <h3 className="lg:text-lg text-base">{jobData.type_job}</h3>
             </div>
             <div className="mt-6 flex flex-col">
               <h2 className="box-detail-h2">Gaji</h2>
@@ -88,7 +77,7 @@ export default async function DetailDescription() {
             </div>
             <div className="mt-6 flex flex-col">
               <h2 className="box-detail-h2">Lokasi</h2>
-              <h3 className="lg:text-lg text-base">DKI Jakarta</h3>
+              <h3 className="lg:text-lg text-base">{jobData.location}</h3>
             </div>
             <div className="flex flex-col mt-16">
               <div class="w-full h-px bg-white"></div>
@@ -98,20 +87,22 @@ export default async function DetailDescription() {
                   <h3>Perusahaan</h3>
                   <div className="flex flex-row items-center gap-1">
                     <HiBadgeCheck size={20} color="green" />
-                    <h3>Rakamin</h3>
+                    <h3>{jobData.company_name}</h3>
                   </div>
                 </div>
-                {/*<Image*/}
-                {/*  src={jobData.company_image}*/}
-                {/*  alt="backgroundDetail"*/}
-                {/*  priority*/}
-                {/*  className="object-cover w-[15%] md:w-[15%] border-2 border-gray-300 rounded-lg"*/}
-                {/*></Image>*/}
+                <Image
+                  src={jobData.company_image}
+                  alt="backgroundDetail"
+                  width={100}
+                  height={100}
+                  priority
+                  className="object-cover w-[15%] md:w-[15%] border-2 border-gray-300 rounded-lg"
+                ></Image>
               </div>
               <div className="flex flex-row w-full mt-4 justify-between">
                 <div className="flex flex-col">
                   <h3>Lokasi</h3>
-                  {/*<h3>{jobData.location}</h3>*/}
+                  <h3>{jobData.location}</h3>
                 </div>
                 <div className="flex items-center py-1 bg-blue-300 px-2 rounded-lg">
                   <h3 className="text-sm text-white">hybird</h3>
