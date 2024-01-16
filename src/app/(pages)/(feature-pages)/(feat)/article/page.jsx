@@ -9,6 +9,7 @@ import {
 import Image from "next/image";
 import SearchArticle from "./components/SearchArticle";
 import ChipCategoryArticle from "./components/ChipCategoryArticle";
+import Link from "next/link";
 
 export default function ArticlePage() {
   const articlesData = [
@@ -90,8 +91,10 @@ export default function ArticlePage() {
       <div className="my-[59px] flex gap-5">
         <div className="flex flex-col gap-4">
           {articlesData.map((article, index) => (
-            <ArticleCards key={index} {...article} />
-          ))}
+              <Link href={`/article/${article.title}`}>
+                  <ArticleCards key={index} {...article} />
+              </Link>
+              ))}
         </div>
         <div className="flex flex-col gap-6">
           <SearchArticle />

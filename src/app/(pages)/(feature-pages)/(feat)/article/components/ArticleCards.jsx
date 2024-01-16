@@ -27,9 +27,10 @@ const ArticleCards = ({ category, date, title, description, imageUrl }) => {
         className='h-[210px] w-[300px] object-cover rounded-md'
         src={imageUrl}
         alt={title}
-        width={300} 
-        height={210} 
-      />    </div>
+        width={300}
+        height={210}
+      />
+    </div>
   );
 };
 
