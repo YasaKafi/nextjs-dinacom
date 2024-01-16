@@ -3,8 +3,9 @@
 import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import { FaRegCalendarAlt } from "react-icons/fa";
+import { format } from "date-fns";
 
-const FormBirthDate = ({ heading }) => {
+const FormBirthDate = ({ heading, setBirthdate }) => {
   const [startDate, setStartDate] = useState(new Date());
 
   return (
@@ -15,7 +16,10 @@ const FormBirthDate = ({ heading }) => {
         </h2>
         <div className="flex flex-row items-center border-2 border-black rounded-xl">
           <FaRegCalendarAlt className="text-primaryText w-24" size={20}/>
-          <DatePicker selected={startDate} dateFormat="MMMM d, yyyy" onChange={(date) => setStartDate(date)} className="py-2  w-[70vh]"/>
+          <DatePicker selected={startDate} dateFormat="MMMM d, yyyy" onChange={(date) => {
+            setStartDate(date);
+            setBirthdate(format(date, "yyyy-MM-dd"));
+          }} className="py-2  w-[70vh]"/>
         </div>
       </div> 
     

@@ -3,8 +3,7 @@ import { Fragment, useState } from "react";
 import { Combobox, Transition } from "@headlessui/react";
 import { CheckIcon, ChevronUpDownIcon } from "@heroicons/react/20/solid";
 
-export default function ComboBoxEdit({ domicile,label }) {
-  const [selected, setSelected] = useState(domicile[0]);
+export default function ComboBoxEdit({ domicile, label, selected, onChange }) {
   const [query, setQuery] = useState("");
 
   const filteredPeople =
@@ -20,9 +19,9 @@ export default function ComboBoxEdit({ domicile,label }) {
   return (
     <div className="flex flex-col">
       <h2 className="text-primaryText text-sm font-medium lg:text-xl mb-2">
-                {label}
-              </h2>
-      <Combobox value={selected} onChange={setSelected}>
+        {label}
+      </h2>
+      <Combobox value={selected?.name || ""} onChange={onChange}>
         <div className="relative  mt-1">
           <div className="relative w-full border border-black cursor-default overflow-hidden rounded-lg bg-white text-left shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 focus-visible:ring-offset-teal-300 sm:text-sm">
             <Combobox.Input
@@ -55,10 +54,12 @@ export default function ComboBoxEdit({ domicile,label }) {
                     key={domicile.id}
                     className={({ active }) =>
                       `relative cursor-default select-none py-2 pl-10 pr-4 z-50 ${
-                        active ? "bg-teal-600 text-white z-50" : "text-gray-900 z-50"
+                        active
+                          ? "bg-teal-600 text-white z-50"
+                          : "text-gray-900 z-50"
                       }`
                     }
-                    value={domicile}
+                    value={domicile.name}
                   >
                     {({ selected, active }) => (
                       <>
@@ -87,11 +88,6 @@ export default function ComboBoxEdit({ domicile,label }) {
           </Transition>
         </div>
       </Combobox>
-
     </div>
-    
-      
-    
   );
 }
-
