@@ -1,13 +1,19 @@
-import React from 'react'
+import React from 'react';
+import article from '@/app/lib/services/endpoint/api/article';
 
-const DetailMainArticle = () => {
-  return (
-    <div className='flex flex-col gap-12'>
-        <h1 className='font-montserrat text-textPrimary text-4xl tracking-wide w-full font-bold '>JOBFAIR 2024 TELAH TIBA, 100 JUTA LOWONGAN PEKERJAAN DIBUTUHKAN!!</h1>
-        <hr className='w-full border-2'/>
-        <p className='font-montserrat '>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis facere, eius libero omnis eum dicta dolores maiores accusamus optio excepturi incidunt. Minus eos reprehenderit ea harum, sapiente nisi officiis at, est laboriosam sequi consectetur impedit accusantium corrupti. Consectetur neque cum laudantium optio officiis temporibus quam, doloribus quidem, in, aperiam architecto quibusdam ea! Incidunt in aut fugit nisi ullam earum, provident accusantium molestias! Esse quas et cum delectus corrupti, odit autem ipsa! Similique obcaecati dolor ducimus repudiandae animi dignissimos tempore soluta odit facilis doloremque voluptatibus sapiente aperiam, nesciunt natus eum qui aliquam omnis unde. Quam molestiae eos, delectus voluptatibus eligendi explicabo? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi repellendus ullam, itaque libero nobis, consequatur quo facere cupiditate est sapiente saepe praesentium possimus optio quia soluta quas. Unde fugit tempora fuga natus odit suscipit minima quaerat excepturi. Sapiente molestiae eum placeat iusto quisquam soluta neque maiores molestias a facilis esse veniam, eveniet blanditiis alias dicta fugiat voluptatibus earum. Unde magni cum impedit incidunt nobis soluta sequi, ea atque, enim dolor itaque animi, accusantium sapiente suscipit nemo libero maiores vero distinctio aliquam quas nam cupiditate quidem earum aut. Optio dignissimos placeat dolore voluptas non consequatur eveniet recusandae! Et, iusto obcaecati rem itaque velit omnis animi totam voluptates necessitatibus similique officia dicta, ullam, ipsa iste beatae sapiente explicabo doloremque. Quaerat dolorum saepe quas autem id. Ab consectetur illo, eaque illum quam veniam alias placeat cupiditate explicabo! Eveniet natus quisquam incidunt delectus impedit nihil quibusdam laboriosam a enim quae ipsa expedita, cumque libero quam nisi, quaerat accusamus voluptatem inventore exercitationem eum? Saepe quasi totam expedita molestiae, facere aliquam vero accusantium alias animi nostrum sequi fuga provident! Voluptates animi error soluta eius mollitia dolore adipisci corrupti minus, in quae? Optio eaque vero nulla obcaecati, sint ipsam magni at odit fugit totam! Corporis, temporibus assumenda.</p>
-    </div>
-  )
+async function getArticle() {
+    const articleData = await article(1);
+    return articleData.data;
 }
 
-export default DetailMainArticle
+export default async function DetailMainArticle() {
+    const dataArticle = await getArticle();
+
+    return (
+        <div className='flex flex-col gap-12'>
+            <h1 className='font-montserrat text-textPrimary text-4xl tracking-wide w-full font-bold '>{dataArticle.title}</h1>
+            <hr className='w-full border-2' />
+            <p className='font-montserrat'>{dataArticle.content}</p>
+        </div>
+    );
+}
