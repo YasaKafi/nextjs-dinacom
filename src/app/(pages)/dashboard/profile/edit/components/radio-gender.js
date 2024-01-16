@@ -3,7 +3,9 @@ import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
 import FormLabel from "@mui/material/FormLabel";
-export default function RadioGender() {
+
+export default  function RadioGender({value, onChange}) {
+  
   return (
     <FormControl>
       <FormLabel
@@ -17,21 +19,26 @@ export default function RadioGender() {
         aria-labelledby="demo-row-radio-buttons-group-label"
         name="row-radio-buttons-group"
         className="mt-4 gap-3 lg:gap-16"
+        value={value}
+        onChange={onChange}
       >
         <FormControlLabel
           value="female"
           control={<Radio />}
-          label="Laki-Laki"
+          label="Perempuan"
           className="text-base font-montserrat text-textPrimary font-medium"
         />
 
         <FormControlLabel
           value="male"
           control={<Radio />}
-          label="Perempuan"
+          label="Laki-Laki"
           className="text-base font-montserrat text-textPrimary font-medium"
         />
       </RadioGroup>
     </FormControl>
   );
 }
+
+//  const dataUser = await getUser();
+// const gender = dataUser.gender === 0 ? "Laki-Laki" : "Perempuan";
