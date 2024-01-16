@@ -5,7 +5,7 @@ import jobDetail from "@/app/lib/services/endpoint/api/job-detail";
 
 
 async function getDataJob() {
-  const jobData = await jobDetail(2);
+  const jobData = await jobDetail(id);
   return jobData.data;
 }
 
