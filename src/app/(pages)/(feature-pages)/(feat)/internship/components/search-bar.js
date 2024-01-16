@@ -5,16 +5,16 @@ import {iconArrowDown, iconLocation, iconSearch} from "@/app/lib/utils/svg";
 import {useRouter} from "next/navigation";
 import {useDebounce} from "use-debounce";
 
-function SearchBarCourses() {
+function SearchBarInternship() {
     const router = useRouter()
     const [searchQuery, setSearchQuery] = useState('');
     const [query] = useDebounce(searchQuery, 500);
 
     useEffect(() => {
         if (searchQuery) {
-            router.push(`/courses?search=${searchQuery}`)
+            router.push(`/internship?search=${searchQuery}`)
         } else {
-            router.push(`/courses`)
+            router.push(`/internship`)
         }
     }, [query, router]);
 
@@ -44,4 +44,4 @@ function SearchBarCourses() {
     );
 }
 
-export default SearchBarCourses;
+export default SearchBarInternship;
