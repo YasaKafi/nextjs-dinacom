@@ -24,6 +24,7 @@ import editProfileUser from '../assets/image/edit-user-profile.png';
 import internshipPersonImage from '../assets/image/internship-person-image.png';
 import bgHeroBuilding from '../assets/image/bg-building.png';
 import bgHeroDetail from '../assets/image/bg-hero-detail.png';
+import popUpIlustration from '../assets/image/pop-up-ilustration.png';
 
 
 export {
@@ -53,4 +54,5 @@ export {
     emptyDataIlustrationInternship,
     bgHeroBuilding,
     bgHeroDetail,
+    popUpIlustration,
 }
