@@ -4,18 +4,18 @@
   import article from '@/app/lib/services/endpoint/api/article';
   import Link from 'next/link';
 
-  async function getArticles() {
-    const articleData = await article();
-    return articleData;
-  }
 
   export default async function ArticleCards() {
-    const articles = await getArticles();
+    const articles = await article();
 
     return (
       <div className='flex flex-col gap-10'>
         {articles.map((item, index) => (
-          <Link href={`/article/[id]`} as={`/article/${item.id}`} key={index}>
+          <Link
+              href={{
+                pathname: `/article/${index}`,
+              }}
+              key={index}>
             <div className='flex w-[970px] justify-between cursor-pointer'>
               <div className='flex flex-col gap-6 w-[610px]'>
                 <div className='flex flex-row gap-2 items-center'>
@@ -43,4 +43,14 @@
         ))}
       </div>
     );
+  }
+
+  export async function getStaticProps() {
+    const articles = await getArticles();
+  
+    return {
+      props: {
+        articles,
+      },
+    };
   }

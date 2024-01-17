@@ -11,48 +11,6 @@ import SearchArticle from "./components/SearchArticle";
 import ChipCategoryArticle from "./components/ChipCategoryArticle";
 
  export default async function ArticlePage() {
-  // const articlesData = [
-  //   {
-  //     category: "JOB",
-  //     date: "AUGUST 13, 2021",
-  //     title:
-  //       "JOBFAIR 2024 TELAH TIBA, 100 JUTA LOWONGAN PEKERJAAN DIBUTUHKAN!!",
-  //     description:
-  //       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. A quisquam repellendus nulla expedita est exercitationem officia delectus ullam libero facere.",
-  //     imageUrl:
-  //       "https://www.investopedia.com/thmb/B-zS06NuMwi1uB3gv8mGTY01rP4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-656544055-19ddbae5e1e1448db35b3969022eb3d0.jpg",
-  //   },
-  //   {
-  //     category: "JOB",
-  //     date: "AUGUST 13, 2021",
-  //     title:
-  //       "JOBFAIR 2024 TELAH TIBA, 100 JUTA LOWONGAN PEKERJAAN DIBUTUHKAN!!",
-  //     description:
-  //       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. A quisquam repellendus nulla expedita est exercitationem officia delectus ullam libero facere.",
-  //     imageUrl:
-  //       "https://www.investopedia.com/thmb/B-zS06NuMwi1uB3gv8mGTY01rP4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-656544055-19ddbae5e1e1448db35b3969022eb3d0.jpg",
-  //   },
-  //   {
-  //     category: "JOB",
-  //     date: "AUGUST 13, 2021",
-  //     title:
-  //       "JOBFAIR 2024 TELAH TIBA, 100 JUTA LOWONGAN PEKERJAAN DIBUTUHKAN!!",
-  //     description:
-  //       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. A quisquam repellendus nulla expedita est exercitationem officia delectus ullam libero facere.",
-  //     imageUrl:
-  //       "https://www.investopedia.com/thmb/B-zS06NuMwi1uB3gv8mGTY01rP4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-656544055-19ddbae5e1e1448db35b3969022eb3d0.jpg",
-  //   },
-  //   {
-  //     category: "JOB",
-  //     date: "AUGUST 13, 2021",
-  //     title:
-  //       "JOBFAIR 2024 TELAH TIBA, 100 JUTA LOWONGAN PEKERJAAN DIBUTUHKAN!!",
-  //     description:
-  //       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. A quisquam repellendus nulla expedita est exercitationem officia delectus ullam libero facere.",
-  //     imageUrl:
-  //       "https://www.investopedia.com/thmb/B-zS06NuMwi1uB3gv8mGTY01rP4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-656544055-19ddbae5e1e1448db35b3969022eb3d0.jpg",
-  //   },
-  // ];
 
 
   const articleCategory =[
