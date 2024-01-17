@@ -1,15 +1,10 @@
-
 import Image from "next/image";
-import Form from "@/app/(pages)/(initial-pages)/components/form";
 import {iconGoogle} from "@/app/lib/utils/svg";
-
-
+import Form from "@/app/(pages)/initial-pages/components/form";
 
 export default  function LoginPage() {
-
     return (
         <main className="h-screen w-screen flex flex-col items-center px-8 py-10 lg:flex-row-reverse lg:py-0 lg:px-0">
-
             <div className="w-full flex justify-end lg:justify-center mb-16 lg:bg-primary lg:h-full lg:mb-0 lg:w-1/2">
                 <Image
                     className="flex items-end lg:hidden"
@@ -69,7 +64,6 @@ export default  function LoginPage() {
                     </div>
                 </div>
             </div>
-
         </main>
     );
 }
