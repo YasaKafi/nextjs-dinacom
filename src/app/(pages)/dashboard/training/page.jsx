@@ -88,7 +88,7 @@ export default function Example() {
               key={idx}
               className={classNames(
                 "rounded-xl  p-3 w-full h-full",
-                "ring-white/60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2"
+                
               )}
             >
               {posts.length === 0 && (
