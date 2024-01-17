@@ -19,8 +19,8 @@ async function JobList({data}) {
             </div>
             {data.map((item, index) => (
 
-                <Link href={`/job/${item.id}`}>
-                    <div key={index} className="w-full  bg-white border border-colorBorder rounded-md p-6 mb-4">
+                <Link href={`/job/${item.id}`} key={index}>
+                    <div className="w-full  bg-white border border-colorBorder rounded-md p-6 mb-4">
                         <div className="flex">
                             <Image className="w-[70px] h-[70px] me-5" src={item.company_image} alt="Job Image" width={100}
                                    height={100}/>
