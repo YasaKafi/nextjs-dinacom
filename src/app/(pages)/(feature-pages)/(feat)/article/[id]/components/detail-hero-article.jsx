@@ -1,9 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import { bgHeroBuilding, bgHeroDetail, courseHeaderBanner, profileBanner } from '@/app/lib/utils/images';
-import article from '@/app/lib/services/endpoint/api/article';
-
-
 
 export default async function DetailHeroArticle({articleData}) {
     if (!articleData) {
