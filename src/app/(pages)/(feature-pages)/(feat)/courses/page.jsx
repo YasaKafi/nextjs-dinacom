@@ -6,58 +6,11 @@ import course from "@/app/lib/services/endpoint/api/course";
 import CourseHeader from "@/app/(pages)/(feature-pages)/(feat)/courses/components/header";
 import SearchBarCourses from "@/app/(pages)/(feature-pages)/(feat)/courses/components/search-bar";
 
-async function Page() {
-    const data = [
-        {
-            id:1,
-            title:"Product Management Basic",
-            description:"Product Management Masterclass, you will learn with Sarah Johnson - Head of Product Customer Platform Gojek Indonesia.",
-            image:courseHeaderBanner,
-        },
-        {
-            id:2,
-            title:"Product Management Basic",
-            description:"Product Management Masterclass, you will learn with Sarah Johnson - Head of Product Customer Platform Gojek Indonesia.",
-            image:courseHeaderBanner,
-        },
-        {
-            id:3,
-            title:"Product Management Basic",
-            description:"Product Management Masterclass, you will learn with Sarah Johnson - Head of Product Customer Platform Gojek Indonesia.",
-            image:courseHeaderBanner,
-        },{
-            id:4,
-            title:"Product Management Basic",
-            description:"Product Management Masterclass, you will learn with Sarah Johnson - Head of Product Customer Platform Gojek Indonesia.",
-            image:courseHeaderBanner,
-        },
-        {
-            id:5,
-            title:"Product Management Basic",
-            description:"Product Management Masterclass, you will learn with Sarah Johnson - Head of Product Customer Platform Gojek Indonesia.",
-            image:courseHeaderBanner,
-        },
-        {
-            id:6,
-            title:"Product Management Basic",
-            description:"Product Management Masterclass, you will learn with Sarah Johnson - Head of Product Customer Platform Gojek Indonesia.",
-            image:courseHeaderBanner,
-        },
-        {
-            id:7,
-            title:"Product Management Basic",
-            description:"Product Management Masterclass, you will learn with Sarah Johnson - Head of Product Customer Platform Gojek Indonesia.",
-            image:courseHeaderBanner,
-        },
-        {
-            id:8,
-            title:"Product Management Basic",
-            description:"Product Management Masterclass, you will learn with Sarah Johnson - Head of Product Customer Platform Gojek Indonesia.",
-            image:courseHeaderBanner,
-        }
-    ]
+async function Page({searchParams}) {
+    const search =
+        typeof searchParams.search === 'string' ? searchParams.search : "";
 
-    const fetchCourse = await course()
+    const fetchCourse = await course(sear)
 
     console.log(fetchCourse)
 
