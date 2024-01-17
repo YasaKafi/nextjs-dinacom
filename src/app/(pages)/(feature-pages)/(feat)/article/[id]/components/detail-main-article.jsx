@@ -1,12 +1,5 @@
 import React from 'react';
 import article from '@/app/lib/services/endpoint/api/article';
-
-async function getArticleById(id) {
-    const articleData = await article();
-    console.log(articleData);
-    return articleData.find((item) => item.id === id);
-  }
-
 export default async function DetailMainArticle({articleData}) {
     if (!articleData) {
         return <p>Article not found</p>;
@@ -20,26 +13,3 @@ export default async function DetailMainArticle({articleData}) {
         </div>
     );
 }
-
-
-export async function getStaticPaths() {
-    const articles = await getArticles();
-  
-    const paths = articles.map((item) => ({
-      params: { id: item.id.toString() },
-    }));
-  
-    return { paths, fallback: false };
-  }
-  
-  export async function getStaticProps({ params }) {
-    const articleData = await getArticleById(params.id);
-  
-    return {
-      props: {
-        articleData,
-      },
-    };
-  }
-  
-  
