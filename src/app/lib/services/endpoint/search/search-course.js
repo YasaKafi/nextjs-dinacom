@@ -1,13 +1,8 @@
 import instanceAxios from "@/app/lib/services/instance/instance";
 
-export default async function job(query) {
+export default async function searchCourse(query) {
     try {
-        const res = await instanceAxios.get(
-            `/search/job`,
-            {params: {search: query}
-            }
-        )
-
+        const res = await instanceAxios.get(`/search/course?search=${query}`)
         return res.data.data
     } catch (error) {
         console.error(error);

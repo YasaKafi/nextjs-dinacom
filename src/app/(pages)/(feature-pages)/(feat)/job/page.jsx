@@ -5,7 +5,10 @@ import JobList from "@/app/(pages)/(feature-pages)/(feat)/job/components/job-lis
 import job from "@/app/lib/services/endpoint/api/job";
 
 export default async function JobPage({searchParams}) {
-    const search = searchParams.search === 'string' ? searchParams.search : undefined
+    const search =
+        typeof searchParams.search === 'string' ? searchParams.search : "";
+    console.log("SEARCH PARAMS")
+    console.log(search)
     const listJob = await job(search)
 
     return (
