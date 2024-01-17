@@ -13,7 +13,7 @@ function SearchBar() {
 
     useEffect(() => {
         if (searchQuery) {
-            router.push(`/job?search=${searchQuery}`)
+            router.push(`/job?search=${searchQuery}`, {scroll: false})
         } else {
             router.push(`/job`)
         }

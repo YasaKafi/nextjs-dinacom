@@ -5,12 +5,13 @@
   import Link from 'next/link';
 
 
-  export default async function ArticleCards() {
-    const articles = await article();
+  export default async function ArticleCards({data}) {
+
+
 
     return (
       <div className='flex flex-col gap-10'>
-        {articles.map((item, index) => (
+        {data.map((item, index) => (
           <Link
               href={{
                 pathname: `/article/${index}`,

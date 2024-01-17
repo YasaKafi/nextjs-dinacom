@@ -12,7 +12,7 @@ function SearchBarCourses() {
 
     useEffect(() => {
         if (searchQuery) {
-            router.push(`/courses?search=${searchQuery}`)
+            router.push(`/courses?search=${searchQuery}`, {scroll: false})
         } else {
             router.push(`/courses`)
         }

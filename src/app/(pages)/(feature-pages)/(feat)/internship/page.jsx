@@ -8,8 +8,10 @@ import SearchBarCourses from "@/app/(pages)/(feature-pages)/(feat)/courses/compo
 import internship from "@/app/lib/services/endpoint/api/internship";
 import SearchBarInternship from "@/app/(pages)/(feature-pages)/(feat)/internship/components/search-bar";
 
-export default async function Page() {
-    const internshipData = await internship()
+export default async function Page({searchParams}){
+    const search =
+        typeof searchParams.search === 'string' ? searchParams.search : "";
+    const internshipData = await internship(search)
 
     return (
         <div className="w-screen bg-gray-100">

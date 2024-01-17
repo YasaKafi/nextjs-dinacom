@@ -10,7 +10,7 @@ const SearchArticle = () => {
 
     useEffect(() => {
         if (searchQuery) {
-            router.push(`/article?search=${searchQuery}`)
+            router.push(`/article?search=${searchQuery}`, {scroll: false})
         } else {
             router.push(`/article`)
         }
