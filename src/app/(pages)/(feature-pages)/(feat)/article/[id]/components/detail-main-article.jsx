@@ -1,5 +1,6 @@
 import React from 'react';
-imp
+
+
 export default async function DetailMainArticle({articleData}) {
     if (!articleData) {
         return <p>Article not found</p>;
