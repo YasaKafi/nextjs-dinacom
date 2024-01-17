@@ -1,5 +1,5 @@
 import React from 'react';
-import article from '@/app/lib/services/endpoint/api/article';
+imp
 export default async function DetailMainArticle({articleData}) {
     if (!articleData) {
         return <p>Article not found</p>;

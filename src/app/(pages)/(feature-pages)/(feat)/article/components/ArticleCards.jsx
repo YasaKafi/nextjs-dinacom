@@ -44,13 +44,3 @@
       </div>
     );
   }
-
-  export async function getStaticProps() {
-    const articles = await getArticles();
-  
-    return {
-      props: {
-        articles,
-      },
-    };
-  }
