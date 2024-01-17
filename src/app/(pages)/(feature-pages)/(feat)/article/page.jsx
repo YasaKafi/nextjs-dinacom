@@ -13,29 +13,7 @@ import ChipCategoryArticle from "./components/ChipCategoryArticle";
  export default async function ArticlePage() {
 
 
-  const articleCategory =[
-    {
-      title : "Job"
-    },
-    {
-      title : "Technology"
-    },
-    {
-      title : "Money"
-    },
-    {
-      title : "Art"
-    },
-    {
-      title : "Productivity"
-    },
-    {
-      title : "Development"
-    },
-    {
-      title : "Business"
-    }
-  ]
+  
 
   return (
     <div className="mt-[63px] px-16 overflow-x-hidden w-screen">
@@ -51,11 +29,7 @@ import ChipCategoryArticle from "./components/ChipCategoryArticle";
           <SearchArticle />
           <div>
             <h1 className="text-lg font-montserrat mb-3">Rekomendasi Topik</h1>
-            <div className="flex flex-wrap gap-3">
-              {articleCategory.map((article, index) => (
-                <ChipCategoryArticle key={index} {...article} />
-              ))};
-            </div>
+            <ChipCategoryArticle/>
           </div>
         </div>
       </div>

@@ -19,15 +19,15 @@
             <div className='flex w-[970px] justify-between cursor-pointer'>
               <div className='flex flex-col gap-6 w-[610px]'>
                 <div className='flex flex-row gap-2 items-center'>
-                  <h1 className='font-semibold font-montserrat bg-blue-300 px-[12px] py-[9px] text-white rounded-md'>
+                  <h1 className='font-regular font-montserrat bg-blue-300 px-[12px] py-[9px] text-white rounded-md'>
                     {item.category}
                   </h1>
                   <h2 className='font-montserrat'>{item.createAt}</h2>
                 </div>
                 <div>
                   <div className='flex flex-col gap-3'>
-                    <h1 className='font-bold font-montserrat text-xl text-textPrimary'>{item.title}</h1>
-                    <p>{item.content}</p>
+                    <h1 className='font-bold font-montserrat text-3xl text-textPrimary'>{item.title}</h1>
+                    <p className='truncate font-montserrat'>{item.content}</p>
                   </div>
                 </div>
               </div>
