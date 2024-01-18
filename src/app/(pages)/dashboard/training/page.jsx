@@ -10,12 +10,15 @@ import {
   emptyDataIlustrationTraining,
 } from "@/app/lib/utils/images";
 import TrainingCard from "./components/card-training";
+import userCourse from "@/app/lib/services/endpoint/user/user-course";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
 export default function Example() {
+
+
   let [categories] = useState({
     "Pelatihan yang sedang berlangsung": [
       {

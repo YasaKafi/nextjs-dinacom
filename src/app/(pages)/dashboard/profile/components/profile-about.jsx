@@ -4,7 +4,7 @@ import getUser from "@/app/lib/services/endpoint/auth/get-user";
 
 export default async function ProfileAbout() {
 
-    const dataUser = await getUser("eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vOTEzOC0xODItMi00NS0yNS5uZ3Jvay1mcmVlLmFwcC9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTcwNTI4NjMzMSwiZXhwIjoxNzA1Mjg5OTMxLCJuYmYiOjE3MDUyODYzMzEsImp0aSI6Im9mUktwN3ByUnF0Q0NoV2siLCJzdWIiOiI2IiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.GvRGl7z6_gtn1_pv8vUYgkFqN7-GHTFV--InkVvjWUk")
+    const dataUser = await getUser("eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYjRhMi0xMDMtMjgtMTEzLTI0NC5uZ3Jvay1mcmVlLmFwcC9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTcwNTU1MzkwMiwiZXhwIjoxNzA1NTU3NTAyLCJuYmYiOjE3MDU1NTM5MDIsImp0aSI6InVUYjNENThkNm4wTkZ0bFIiLCJzdWIiOiIyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.K79iaFlWOqoiwhKY18amdU8Cn8ibWog_vhYXdpvxd40")
 
     const gender = dataUser.gender === 0 ? "Laki-laki" : dataUser.gender === 1 ?  "Perempuan" : "Lainnya"
 

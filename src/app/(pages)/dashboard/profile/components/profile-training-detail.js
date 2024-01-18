@@ -7,8 +7,10 @@ import {
     Tab,
     TabPanel,
 } from "@material-tailwind/react";
+import userCourse from "@/app/lib/services/endpoint/user/user-course";
 
-function ProfileTrainingDetail() {
+async function ProfileTrainingDetail() {
+
 
     const data = [
         {
