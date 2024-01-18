@@ -55,7 +55,7 @@ const features = [
   "Assesmen Akhir",
 ];
 
-const MainComponent = () => {
+const MainComponent = ({data}) => {
   const [expanded, setExpanded] = React.useState(false);
 
   const handleChange = (panel) => (event, isExpanded) => {
@@ -71,7 +71,7 @@ const MainComponent = () => {
               Course Curriculum
             </h1>
             <div className="w-full h-full  ">
-              {courseData.map((course, index) => (
+              {data.course_curicullum.map((course, index) => (
                 <Accordion key={index} expanded={expanded === `panel${index + 1}`} onChange={handleChange(`panel${index + 1}`)}>
                   <AccordionSummary
                     style={{ backgroundColor: "#f0f0f0" }}
@@ -79,11 +79,14 @@ const MainComponent = () => {
                     aria-controls={`panel${index + 1}-content`}
                     id={`panel${index + 1}-header`}
                   >
-                    <Typography>{course.title}</Typography>
+                    <Typography>{course}</Typography>
                   </AccordionSummary>
-                  <AccordionDetails>
-                    <Typography>{course.description}</Typography>
-                  </AccordionDetails>
+                  {data.course_description.map((description, index) => (
+                    <AccordionDetails key={index}>
+                      <Typography>{description[index]}</Typography>
+                    </AccordionDetails>
+                  )
+                  )}
                 </Accordion>
               ))}
             </div>

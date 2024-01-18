@@ -5,12 +5,13 @@ import {courseHeaderBanner} from "@/app/lib/utils/images";
 import course from "@/app/lib/services/endpoint/api/course";
 import CourseHeader from "@/app/(pages)/(feature-pages)/(feat)/courses/components/header";
 import SearchBarCourses from "@/app/(pages)/(feature-pages)/(feat)/courses/components/search-bar";
+import Link from "next/link";
 
 async function Page({searchParams}) {
     const search =
         typeof searchParams.search === 'string' ? searchParams.search : "";
 
-    const fetchCourse = await course(sear)
+    const fetchCourse = await course(search)
 
     console.log(fetchCourse)
 
@@ -22,7 +23,7 @@ async function Page({searchParams}) {
                 <div className="h-full grid grid-cols-4 gap-5 mt-10">
 
                     {fetchCourse.map((item,index)=> (
-                        <div key={index} className="rounded-xl h-[400px] bg-white overflow-hidden mb-5">
+                        <div key={index} className="rounded-xl h-[470px] bg-white overflow-hidden mb-5">
 
                             <Image className="w-full h-[130px] object-cover" src={item.image_course} alt="Course Header Banner"
                                    width={300} height={300}/>
@@ -32,9 +33,11 @@ async function Page({searchParams}) {
                                 <h1 className="text-primary font-bold text-lg">{item.title}</h1>
                                 <p className="text-textPrimary font-light text-xs">{item.description}</p>
 
-                                <button className="bg-primary w-2/3 py-3 text-white rounded-xl">
-                                    Daftar Sekarang
-                                </button>
+                                <Link href={`/courses/detail/${item.id}`}>
+                                    <button className="bg-primary w-2/3 py-3 text-white rounded-xl">
+                                        Daftar Sekarang
+                                    </button>
+                                </Link>
                             </div>
 
                         </div>
