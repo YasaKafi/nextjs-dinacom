@@ -13,25 +13,6 @@ export default async function InternshipPage() {
   console.log("DATA USER INTERNSHIP")
   console.log(dataUserInternship)
 
-  const posts = [
-    {
-      id: 1,
-      title: "Digital Marketing Nuri",
-      company: "PT Nuri Gaya Citra",
-      department: "Digital Marketing",
-      imageUrl: coursesWork,
-      presentase: 50,
-    },
-    {
-      id: 2,
-      title: "Digital Marketing Gojek",
-      company: "PT Gojek",
-      department: "Digital Marketing",
-      imageUrl: coursesWork,
-      presentase: 100,
-    },
-  ];
-
   return (
     <main className="w-full h-full">
       {dataUserInternship.length === 0 && (

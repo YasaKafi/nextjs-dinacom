@@ -6,7 +6,8 @@ import LandingContact from "@/app/(pages)/(feature-pages)/components/landing-con
 import PopUpAfterLogin from "./components/landing-pop-up-after-login";
 
 
-export default function Home() {
+
+export default async function Home() {
   return (
     <>
         <LandingHero/>
