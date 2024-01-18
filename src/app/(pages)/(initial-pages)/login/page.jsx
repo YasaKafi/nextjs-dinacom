@@ -1,6 +1,6 @@
 import Image from "next/image";
 import {iconGoogle} from "@/app/lib/utils/svg";
-import Form from "@/app/(pages)/initial-pages/components/form";
+import Form from "@/app/(pages)/(initial-pages)/components/form";
 
 export default  function LoginPage() {
     return (
