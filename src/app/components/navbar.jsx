@@ -4,10 +4,12 @@ import {iconHamburger} from "@/app/lib/utils/svg";
 import NavbarMobileBtn from "@/app/components/navbar-mobile-btn";
 import Link from "next/link";
 import React from "react";
+import MenuProfile from "./menu-profile";
+import logout from "../lib/services/endpoint/auth/logout";
 
-function Navbar() {
+ async function  Navbar() {
     const isLogin = true;
-
+   
     return (
         <div className="bg-white w-screen py-3 px-5 flex justify-between shadow-md fixed top-0 z-30">
 
@@ -50,7 +52,9 @@ function Navbar() {
                     </button>
                 </Link>
 
-                <Image className="w-[60px] h-[60px]" src={avatarUser} width={100} height={100} />
+                
+            <MenuProfile/>
+                
 
             </div> : <div className="hidden lg:gap-3 lg:flex">
                 <Link href={"/login"}>
