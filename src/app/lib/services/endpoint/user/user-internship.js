@@ -6,6 +6,8 @@ export default async function userInternship(userId) {
             `/internship-user/${userId}`
         )
         const userData = res.data.data
+        console.log("TEST USER DATA INTERNSHIP")
+        console.log(userData)
 
         const userInternshipData = userData.internship_id.map(async (courseId) => {
             const resList = await instanceAxios.get(
