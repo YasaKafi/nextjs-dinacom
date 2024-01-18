@@ -7,24 +7,23 @@ import { userProfile } from "@/app/lib/utils/images";
 import { FiLogOut } from "react-icons/fi";
 import { GoPerson } from "react-icons/go";
 import Image from "next/image";
+import logout from "@/app/lib/services/endpoint/auth/logout";
+import { useRouter } from 'next/navigation';
 
-const menuItems = [
-  {
-    title: "Profil Saya",
-    icon: <GoPerson size={25} />,
-    textColor: "text-black",
-    urlPath : "/dashboard/profile"
-  },
-  {
-    title: "Keluar",
-    icon: <FiLogOut size={25} color="red" />,
-    textColor: "text-red-600",
-    urlPath : "/dashboard/training"
-  },
-];
 
 export default function MenuProfile() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const router = useRouter();
+
+    const handleLogout = async () => {
+        try {
+            await logout("eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vOGExMy0zNi02NS0yMTQtMjI2Lm5ncm9rLWZyZWUuYXBwL2FwaS9hdXRoL2xvZ2luIiwiaWF0IjoxNzA1NjE2NzcyLCJleHAiOjE3MDU2MjAzNzIsIm5iZiI6MTcwNTYxNjc3MiwianRpIjoiaUlLcHlmRXd2WUZiZlZaSyIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.BqEYFUq1PkHb6Bd3flOhtH4Y21VmHyikpfbY7-T4ZIU");
+            setIsMenuOpen(false);
+            router.push("/login");
+        } catch (error) {
+            console.error("Error during logout:", error);
+        }
+    };
   return (
     <Menu as="div" className="relative inline-block ">
       <div>
@@ -68,24 +67,33 @@ export default function MenuProfile() {
         <Menu.Items className=" z-50 absolute mt-6 right-0  w-[17vw]  border border-blue-100   rounded-xl  shadow-lg  ">
           <div>
             <Menu.Item>
-              <div className=" font-montserrat flex-col  p-4 w-full bg-white flex rounded-xl ">
-                {menuItems.map((item, index) => (
-                  <div key={index} className="w-full  flex">
-                    <a
-                      href=
-                        {item.urlPath}
-                    >
-                      <button className="flex flex-row items-start w-full">
-                        <h4 className="font-normal  p-2">{item.icon}</h4>
-                        <h2
-                          className={`font-semibold text-base p-2 ${item.textColor}`}
-                        >
-                          {item.title}
-                        </h2>
-                      </button>
-                    </a>
-                  </div>
-                ))}
+            <div className=" font-montserrat flex-col  p-4 w-full bg-white flex rounded-xl ">
+                <div className="w-full  flex">
+                  <a href="/dashboard/profile">
+                    <button className="flex flex-row items-start w-full">
+                      <h4 className="font-normal  p-2">
+                        {" "}
+                        <GoPerson size={25} />
+                      </h4>
+                      <h2 className={`font-semibold text-base p-2 text-black`}>
+                        Profil Saya
+                      </h2>
+                    </button>
+                  </a>
+                </div>
+                <div className="w-full  flex">
+                  
+                    <button onClick={handleLogout} className="flex flex-row items-start w-full">
+                      <h4 className="font-normal  p-2">
+                        {" "}
+                        <FiLogOut size={25} color="red" />
+                      </h4>
+                      <h2 className={`font-semibold text-base p-2 text-red-600`}>
+                      Keluar
+                      </h2>
+                    </button>
+                  
+                </div>
               </div>
             </Menu.Item>
           </div>
