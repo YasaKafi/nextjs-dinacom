@@ -5,18 +5,14 @@ import { FaArrowTrendUp } from "react-icons/fa6";
 import { FaArrowDownLong } from "react-icons/fa6";
 import Image from "next/image";
 
-const HeroComponent = () => {
+const HeroComponent = ({data}) => {
   return (
     <div className="w-full h-[60vh] relative bg-yellow-50">
       <Image src={bgHeroBuilding} className="w-full h-full" alt="Hero Courses Enroll" />
       <div className="absolute top-32 left-20 w-1/2 text-white flex flex-col gap-6">
-        <h1 className="font-semibold text-5xl ">Business and Management</h1>
+        <h1 className="font-semibold text-5xl ">{data.title}</h1>
         <p className="font-normal">
-          This (Hons) Business and Management BSc course from University of
-          Essex Online will help you adapt to the ever-changing world of
-          business. We&apos;ll examine a range of real-world business examples and
-          use them to develop the broad skillset that a good manager should be
-          able to draw from.
+            {data.description}
         </p>
       </div>
       <div className="absolute bottom-24 left-20 w-1/2 text-white flex flex-row gap-6">
