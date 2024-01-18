@@ -5,6 +5,9 @@ import {avatarUser, smarthomeLogo} from "@/app/lib/utils/images";
 import NavbarMobileBtn from "@/app/components/navbar-mobile-btn";
 import Link from "next/link";
 import React from "react";
+
+import MenuProfile from "./menu-profile";
+import logout from "../lib/services/endpoint/auth/logout";
 import {signIn, useSession} from "next-auth/react";
 
 function Navbar() {
@@ -57,7 +60,9 @@ function Navbar() {
                     </button>
                 </Link>
 
-                <Image className="w-[60px] h-[60px]" src={avatarUser} width={100} height={100} />
+                
+            <MenuProfile/>
+                
 
             </div> : <div className="hidden lg:gap-3 lg:flex">
                     <button onClick={signIn} className="px-[30px] py-[10px] text-primary border border-primary rounded-xl">

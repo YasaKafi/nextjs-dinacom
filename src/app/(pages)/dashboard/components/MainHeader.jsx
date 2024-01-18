@@ -7,6 +7,7 @@ import { userProfile } from "@/app/lib/utils/images";
 import { useSidebar } from "./SidebarContext";
 import { IoIosArrowDown } from "react-icons/io";
 import { usePathname } from "next/navigation";
+import MenuProfile from "./menu-profile";
 export default function MainHeader() {
   const [isSideBarOpen, toggleSidebar] = useSidebar();
 
@@ -47,28 +48,7 @@ export default function MainHeader() {
         </h2>
         <div className="w-1/4 h-px ml-4 border-2 border-black rounded-xl"></div>
       </div>
-
-      <div className="flex-row hidden lg:flex gap-3 items-center  bg-primary bg-opacity-25 rounded-xl py-2">
-        <div className="w-10 h-10 relative rounded-lg  overflow-hidden ml-3">
-          <Image
-            src={userProfile}
-            alt="User Profile"
-            layout="fill"
-            objectFit="cover"
-          />
-        </div>
-
-        <div className="flex flex-col">
-          <h2 className="font-medium font-montserrat text-xs lg:text-base text-nowrap">
-            Yasa Kafi Razzan
-          </h2>
-          <h3 className="text-blue-600 text-sm">Free</h3>
-        </div>
-
-        <div className="mr-4">
-          <IoIosArrowDown size={30} />
-        </div>
-      </div>
+      <MenuProfile />
     </div>
   );
 }
