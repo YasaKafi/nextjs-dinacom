@@ -30,6 +30,11 @@ import iconArrowDown from '@/app/lib/assets/svg/icon-arrow-down.svg'
 import iconFilter from '@/app/lib/assets/svg/icon-filter.svg'
 import internshipBanner from '@/app/lib/assets/svg/internship-banner.svg'
 import iconCompany from '@/app/lib/assets/svg/icon-company.svg'
+import iconAmex from '@/app/lib/assets/svg/amex.svg'
+import iconMasterCard from '@/app/lib/assets/svg/mastercard.svg'
+import iconDiscover from '@/app/lib/assets/svg/discover.svg'
+import iconVisa from '@/app/lib/assets/svg/visa.svg'
+import iconPremium from '@/app/lib/assets/svg/premium.svg'
 
 export {
    iconGoogle,
@@ -64,4 +69,9 @@ export {
    iconFilter,
    internshipBanner,
    iconCompany,
+   iconAmex,
+   iconMasterCard,
+   iconDiscover,
+   iconVisa,
+   iconPremium,
 };
