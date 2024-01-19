@@ -4,7 +4,7 @@ import {iconFacebookWhite, iconInstagramWhite, iconTwitterWhite} from "@/app/lib
 
 function Footer() {
     return (
-        <div className="bg-primary flex flex-col items-center px-[21px] py-[70px]">
+        <div className="bg-primary flex flex-col px-[21px] py-[70px]">
 
             <div className="flex items-center gap-3">
                 <h1 className="text-white text-base lg:text-lg">SmartCarrier</h1>
@@ -18,7 +18,7 @@ function Footer() {
                 <li>Kritik Saran</li>
                 <li>Kontak</li>
             </ul>
-            
+
             <div className="flex gap-10 items-center">
                 <Image className="w-4 h-4 lg:w-6 lg:h-6" src={iconFacebookWhite} alt="IconFacebook" width={20} height={20}/>
                 <Image className="w-4 h-4 lg:w-6 lg:h-6" src={iconTwitterWhite} alt="Icon Twitter" width={20} height={20}/>

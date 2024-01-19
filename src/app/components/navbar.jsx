@@ -1,15 +1,25 @@
+"use client"
+
 import Image from "next/image";
-import {avatarUser, smarthomeLogo, userProfileNavbar} from "@/app/lib/utils/images";
-import {iconHamburger} from "@/app/lib/utils/svg";
+import {avatarUser, smarthomeLogo} from "@/app/lib/utils/images";
 import NavbarMobileBtn from "@/app/components/navbar-mobile-btn";
 import Link from "next/link";
 import React from "react";
+import {signIn, signOut, useSession} from "next-auth/react";
+import {useRouter} from "next/navigation";
 import MenuProfile from "./menu-profile";
 import logout from "../lib/services/endpoint/auth/logout";
 
- async function  Navbar() {
-    const isLogin = true;
-   
+function Navbar() {
+    const { data: session } = useSession();
+    console.log(session?.user?.access_token);
+    const sessionExist = session?.user?.access_token !== undefined;
+    console.log("Login Status:")
+    console.log(sessionExist)
+
+
+
+
     return (
         <div className="bg-white w-screen py-3 px-5 flex justify-between shadow-md fixed top-0 z-30">
 
@@ -45,23 +55,23 @@ import logout from "../lib/services/endpoint/auth/logout";
 
             <NavbarMobileBtn/>
 
-            {isLogin ? <div className="hidden lg:gap-3 lg:flex lg:items-center">
+            {sessionExist ? <div className="hidden lg:gap-3 lg:flex lg:items-center">
                 <Link href={"/dashboard/training"}>
                     <button className="px-[30px] py-[10px] text-white bg-primary rounded-xl">
                         Dashboard
                     </button>
                 </Link>
 
-                
+                <Image onClick={signOut} className="w-[60px] h-[60px] cursor-pointer" src={avatarUser} width={100} height={100} />
+
             <MenuProfile/>
-                
+
 
             </div> : <div className="hidden lg:gap-3 lg:flex">
-                <Link href={"/login"}>
-                    <button className="px-[30px] py-[10px] text-primary border border-primary rounded-xl">
+                    <button onClick={signIn} className="px-[30px] py-[10px] text-primary border border-primary rounded-xl">
                         Masuk
                     </button>
-                </Link>
+
 
                 <Link href={"/register"}>
                     <button className="px-[30px] py-[10px] text-white bg-primary rounded-xl">

@@ -10,8 +10,7 @@ import jobDetail from "@/app/lib/services/endpoint/api/job-detail";
 
 export default async function DetailDescription({id}) {
   const jobData = await jobDetail(id);
-  console.log("JOB DATA TESTING")
-  console.log(jobData)
+
 
   return (
     <div className="w-full flex flex-col justify-start px-6 lg:px-24">
@@ -25,7 +24,7 @@ export default async function DetailDescription({id}) {
               Anda akan bertanggung jawab :
             </h2>
             <ul className="mt-4">
-              {jobData.jobdesk_description.description.map((item, index) => (
+              {jobData.jobdesk_description.map((item, index) => (
                 <li
                   key={index}
                   className="list-disc ml-4 text-xs md:text-sm lg:text-base"
@@ -40,14 +39,14 @@ export default async function DetailDescription({id}) {
               Persyaratan :
             </h2>
             <ul className="mt-4">
-              {/*// {jobData.jobdesk_requirement.map((item, index) => (*/}
-              {/*//   <li*/}
-              {/*//     key={index}*/}
-              {/*//     className="list-disc ml-4 text-xs md:text-sm lg:text-base"*/}
-              {/*//   >*/}
-              {/*//     {item}*/}
-              {/*//   </li>*/}
-              {/*// ))}*/}
+              {jobData.jobdesk_requirement.map((item, index) => (
+                <li
+                  key={index}
+                  className="list-disc ml-4 text-xs md:text-sm lg:text-base"
+                >
+                  {item}
+                </li>
+              ))}
             </ul>
           </div>
         </div>
