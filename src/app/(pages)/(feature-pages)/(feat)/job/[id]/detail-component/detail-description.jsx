@@ -25,7 +25,7 @@ export default async function DetailDescription({id}) {
               Anda akan bertanggung jawab :
             </h2>
             <ul className="mt-4">
-              {jobData.jobdesk_description.description.map((item, index) => (
+              {jobData.jobdesk_description.map((item, index) => (
                 <li
                   key={index}
                   className="list-disc ml-4 text-xs md:text-sm lg:text-base"
