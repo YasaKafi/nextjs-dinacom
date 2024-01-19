@@ -7,8 +7,7 @@ import job from "@/app/lib/services/endpoint/api/job";
 export default async function JobPage({searchParams}) {
     const search =
         typeof searchParams.search === 'string' ? searchParams.search : "";
-    console.log("SEARCH PARAMS")
-    console.log(search)
+
     const listJob = await job(search)
 
     return (
