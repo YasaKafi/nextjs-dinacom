@@ -1,12 +1,5 @@
 import React from "react";
 import ArticleCards from "./components/ArticleCards";
-import {
-  bgHeroBuilding,
-  bgHeroDetail,
-  courseHeaderBanner,
-  profileBanner,
-} from "@/app/lib/utils/images";
-import Image from "next/image";
 import SearchArticle from "./components/SearchArticle";
 import ChipCategoryArticle from "./components/ChipCategoryArticle";
 import article from "@/app/lib/services/endpoint/api/article";
@@ -15,8 +8,9 @@ import article from "@/app/lib/services/endpoint/api/article";
      const search =
          typeof searchParams.search === 'string' ? searchParams.search : "";
 
-     const articles = await article(search);
+     const category = typeof searchParams.category === 'string' ? searchParams.category : "";
 
+     const articles = await article(search, category);
 
   return (
     <div className="mt-[63px] px-16 overflow-x-hidden w-screen">
