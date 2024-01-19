@@ -12,29 +12,6 @@ import { IoIosArrowDropdownCircle } from "react-icons/io";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
-const courseData = [
-  {
-    title: "Introduction to Business",
-    description:
-      "This subject provides a foundational overview of the business environment, introducing key concepts, structures, and functions of organizations.",
-  },
-  {
-    title: "Principles of Management",
-    description:
-      "This subject provides a foundational overview of the business environment, introducing key concepts, structures, and functions of organizations",
-  },
-  {
-    title: "Marketing Strategies",
-    description:
-      "This subject provides a foundational overview of the business environment, introducing key concepts, structures, and functions of organizations",
-  },
-  {
-    title: "Financial Accounting",
-    description:
-      "This subject provides a foundational overview of the business environment, introducing key concepts, structures, and functions of organizations",
-  },
-];
-
 const theme = createTheme({
   typography: {
     allVariants: {
@@ -57,6 +34,8 @@ const features = [
 
 const MainComponent = ({data}) => {
   const [expanded, setExpanded] = React.useState(false);
+  console.log('DATA DARI MAIN COMPONENT')
+  console.log(data)
 
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
@@ -71,7 +50,7 @@ const MainComponent = ({data}) => {
               Course Curriculum
             </h1>
             <div className="w-full h-full  ">
-              {data.course_curicullum.map((course, index) => (
+              {data.options.map((course, index) => (
                 <Accordion key={index} expanded={expanded === `panel${index + 1}`} onChange={handleChange(`panel${index + 1}`)}>
                   <AccordionSummary
                     style={{ backgroundColor: "#f0f0f0" }}
@@ -79,14 +58,11 @@ const MainComponent = ({data}) => {
                     aria-controls={`panel${index + 1}-content`}
                     id={`panel${index + 1}-header`}
                   >
-                    <Typography>{course}</Typography>
+                    <Typography>{course.course_curicullum}</Typography>
                   </AccordionSummary>
-                  {data.course_description.map((description, index) => (
                     <AccordionDetails key={index}>
-                      <Typography>{description[index]}</Typography>
+                      <Typography>{course.course_description}</Typography>
                     </AccordionDetails>
-                  )
-                  )}
                 </Accordion>
               ))}
             </div>
