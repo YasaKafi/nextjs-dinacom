@@ -41,7 +41,9 @@ export default function UploadFile() {
   };
   return (
     <>
-      <div className=" mt-10  w-full h-auto  flex flex-row justify-between items-center">
+    
+        <h2 className= "mt-10 mb-2 text-black  text-sm">*Masukkan foto selfie dengan kartu identitas atau ktp secara jelas</h2>
+      <div className="   w-full h-auto  flex flex-row justify-between items-center">
         <div className="w-full h-full border border-dashed py-6 border-gray-400 rounded-xl items-center justify-between flex flex-row px-6">
           <div className="flex flex-row gap-4 h-full items-center">
             <div
