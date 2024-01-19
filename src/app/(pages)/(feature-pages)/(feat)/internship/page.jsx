@@ -1,10 +1,6 @@
-
 import Image from "next/image";
-import {courseHeaderBanner, jobImage} from "@/app/lib/utils/images";
 import React from "react";
-import {iconCompany} from "@/app/lib/utils/svg";
 import InternshipHeader from "@/app/(pages)/(feature-pages)/(feat)/internship/components/header";
-import SearchBarCourses from "@/app/(pages)/(feature-pages)/(feat)/courses/components/search-bar";
 import internship from "@/app/lib/services/endpoint/api/internship";
 import SearchBarInternship from "@/app/(pages)/(feature-pages)/(feat)/internship/components/search-bar";
 
@@ -18,8 +14,7 @@ export default async function Page({searchParams}){
             <InternshipHeader/>
             <div className=" px-[90px]">
                 <SearchBarInternship/>
-                <div className="h-full grid grid-cols-3 gap-5 mt-10">
-
+                <div className="h-full grid grid-cols-3 gap-5 mt-10">\
                     {internshipData.map((item, index) => (
                         <div key={index} className="rounded-xl  bg-white overflow-hidden mb-5 p-6 flex gap-5">
 
