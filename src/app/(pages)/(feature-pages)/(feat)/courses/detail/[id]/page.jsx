@@ -17,3 +17,10 @@ export default async function EnrollCourses({params}) {
       </main>
   );
 }
+
+
+//Fetch add user Course
+//requirement: id course, id user
+//id course can be take from courseDetail
+//id user can be take from auth
+//while the button need to be client component
