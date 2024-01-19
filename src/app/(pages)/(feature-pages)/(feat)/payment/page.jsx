@@ -4,10 +4,10 @@ import { BsBank } from "react-icons/bs";
 import { PiWallet } from "react-icons/pi";
 import { MdPayments } from "react-icons/md";
 
-
-
 import { Tab } from "@headlessui/react";
 import InputNoCard from "./components/input-no-card";
+import CustomDatePicker from "./components/date-picker";
+import InputNoCvcCard from "./components/input-cvc-card";
 
 // Define payment options
 const paymentOptions = [
@@ -55,7 +55,11 @@ export default function PaymentPage() {
               key={option.id}
               className="rounded-xl bg-white p-3 ring-white/60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2"
             >
-              <InputNoCard/>
+              <InputNoCard />
+              <div className="w-full mt-8 flex flex-row gap-6 ">
+                <CustomDatePicker/>
+                <InputNoCvcCard/>
+              </div>
               
             </Tab.Panel>
           ))}
