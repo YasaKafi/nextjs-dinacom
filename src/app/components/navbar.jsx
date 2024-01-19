@@ -7,6 +7,8 @@ import Link from "next/link";
 import React from "react";
 import {signIn, signOut, useSession} from "next-auth/react";
 import {useRouter} from "next/navigation";
+import MenuProfile from "./menu-profile";
+import logout from "../lib/services/endpoint/auth/logout";
 
 function Navbar() {
     const { data: session } = useSession();
@@ -61,6 +63,9 @@ function Navbar() {
                 </Link>
 
                 <Image onClick={signOut} className="w-[60px] h-[60px] cursor-pointer" src={avatarUser} width={100} height={100} />
+
+            <MenuProfile/>
+
 
             </div> : <div className="hidden lg:gap-3 lg:flex">
                     <button onClick={signIn} className="px-[30px] py-[10px] text-primary border border-primary rounded-xl">
