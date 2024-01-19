@@ -34,6 +34,7 @@ import iconAmex from '@/app/lib/assets/svg/amex.svg'
 import iconMasterCard from '@/app/lib/assets/svg/mastercard.svg'
 import iconDiscover from '@/app/lib/assets/svg/discover.svg'
 import iconVisa from '@/app/lib/assets/svg/visa.svg'
+import iconPremium from '@/app/lib/assets/svg/premium.svg'
 
 export {
    iconGoogle,
@@ -71,5 +72,6 @@ export {
    iconAmex,
    iconMasterCard,
    iconDiscover,
-   iconVisa
+   iconVisa,
+   iconPremium,
 };
