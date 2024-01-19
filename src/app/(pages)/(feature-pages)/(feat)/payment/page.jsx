@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { BsBank } from "react-icons/bs";
 import { PiWallet } from "react-icons/pi";
 import { MdPayments } from "react-icons/md";
@@ -8,6 +8,8 @@ import { Tab } from "@headlessui/react";
 import InputNoCard from "./components/input-no-card";
 import CustomDatePicker from "./components/date-picker";
 import InputNoCvcCard from "./components/input-cvc-card";
+import UploadFile from "./components/upload-file";
+
 
 // Define payment options
 const paymentOptions = [
@@ -23,6 +25,8 @@ export default function PaymentPage() {
   const handleOptionClick = (optionId) => {
     setSelectedOption(optionId === selectedOption ? null : optionId);
   };
+
+  
 
   return (
     <div className="h-screen w-full  px-[20%] flex flex-col pt-24 pb-36">
@@ -57,9 +61,10 @@ export default function PaymentPage() {
             >
               <InputNoCard />
               <div className="w-full mt-8 flex flex-row gap-6 ">
-                <CustomDatePicker/>
-                <InputNoCvcCard/>
+                <CustomDatePicker />
+                <InputNoCvcCard />
               </div>
+              <UploadFile/>
               
             </Tab.Panel>
           ))}
