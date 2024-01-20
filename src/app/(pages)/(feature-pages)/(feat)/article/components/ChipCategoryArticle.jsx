@@ -1,8 +1,8 @@
 "use client"
 
-import { useState } from "react";
+import {useEffect, useState} from "react";
 import React from "react";
-
+import {useRouter} from "next/navigation";
 
 const ChipCategoryArticle = () => {
   const articleCategory = [
@@ -15,12 +15,26 @@ const ChipCategoryArticle = () => {
     { title: "Business" },
     { title: "Healthcare" },
   ];
+  const [selectedChip, setSelectedChip] = useState(null)
+  const [selectedChipIndex, setSelectedChipIndex] = useState("")
 
-  const [selectedChip, setSelectedChip] = useState(null);
+  const router = useRouter()
+
+  useEffect(() => {
+    if (selectedChipIndex) {
+      router.push(`/article?category=${selectedChipIndex}`, {scroll: false})
+    } else {
+      router.push(`/article`)
+    }
+  }, [selectedChip, router]);
+
 
   const handleChipClick = (index) => {
     setSelectedChip(index === selectedChip ? null : index);
+    setSelectedChipIndex(articleCategory[index].title);
   };
+
+
 
   return (
     <div>

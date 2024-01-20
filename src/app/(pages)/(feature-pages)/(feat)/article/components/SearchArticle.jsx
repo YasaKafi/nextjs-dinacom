@@ -15,6 +15,7 @@ const SearchArticle = () => {
             router.push(`/article`)
         }
     }, [query, router]);
+
   return (
     <div>
         <input
