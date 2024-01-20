@@ -8,6 +8,7 @@ import Image from "next/image";
 import { avatarUser } from "@/app/lib/utils/images";
 import logout from "../lib/services/endpoint/auth/logout";
 import { useRouter } from 'next/navigation';
+import {signIn, signOut, useSession} from "next-auth/react";
 
 
 
@@ -15,15 +16,16 @@ export default  function MenuProfile() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const router = useRouter();
 
-    const handleLogout = async () => {
-        try {
-            await logout("eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vNjljMC0xMDMtMjgtMTEzLTI0NC5uZ3Jvay1mcmVlLmFwcC9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTcwNTU3MTE2MCwiZXhwIjoxNzA1NTc0NzYwLCJuYmYiOjE3MDU1NzExNjAsImp0aSI6IjZTcnBFTEJTTmFZV3hONk0iLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.wdmEt0FKlYkR-ISs4LCaL0oF4szaXOgCCmTmZWRd5-w");
-            setIsMenuOpen(false);
-            router.push("/login");
-        } catch (error) {
-            console.error("Error during logout:", error);
-        }
-    };
+    // const handleLogout = async () => {
+    //     try {
+    //         await logout("eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vNjljMC0xMDMtMjgtMTEzLTI0NC5uZ3Jvay1mcmVlLmFwcC9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTcwNTU3MTE2MCwiZXhwIjoxNzA1NTc0NzYwLCJuYmYiOjE3MDU1NzExNjAsImp0aSI6IjZTcnBFTEJTTmFZV3hONk0iLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.wdmEt0FKlYkR-ISs4LCaL0oF4szaXOgCCmTmZWRd5-w");
+    //         setIsMenuOpen(false);
+    //         router.push("/login");
+    //     } catch (error) {
+    //         console.error("Error during logout:", error);
+    //     }
+    // };
+
   return (
     <Menu as="div" className="relative inline-block ">
       <div>
@@ -68,7 +70,7 @@ export default  function MenuProfile() {
                 </div>
                 <div className="w-full  flex">
                   
-                    <button onClick={handleLogout} className="flex flex-row items-start w-full">
+                    <button onClick={signOut} className="flex flex-row items-start w-full">
                       <h4 className="font-normal  p-2">
                         {" "}
                         <FiLogOut size={25} color="red" />

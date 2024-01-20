@@ -80,12 +80,7 @@ const MainComponent = ({data}) => {
                   </li>
                 ))}
               </ul>
-              <button className="bg-white w-full h-1/4 mb-5 rounded-lg flex flex-row justify-center items-center gap-3 mt-4">
-                <h1 className="font-medium text-lg text-primary">
-                  Belajar Sekarang
-                </h1>
-                <EastRoundedIcon sx={{ color: "#28B2FF", fontSize: 25 }} />
-              </button>
+
             </div>
           </div>
         </div>

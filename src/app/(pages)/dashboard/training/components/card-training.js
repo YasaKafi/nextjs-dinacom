@@ -15,7 +15,7 @@ const TrainingCard = ({ post, decorationBox, decorationBottom }) => {
 
       <div className="flex flex-col w-[70%] justify-between">
         <div className="pr-6">
-          <h2 className="font-semibold text-xs md:text-base">{post.title}</h2>
+          <h2 className="font-semibold text-xs md:text-base mb-5">{post.title}</h2>
         </div>
         <div className="flex flex-row items-center gap-3">
           <div className="w-8 h-8 sm:w-14 sm:h-14 sm:mb-4">
@@ -53,7 +53,9 @@ const TrainingCard = ({ post, decorationBox, decorationBottom }) => {
       <div className="w-[30%] mb-4 flex flex-row justify-start items-center">
         <Image
           src={post.imageUrl}
-          alt=""
+          alt="Image Course User"
+          width={100}
+          height={100}
           className="rounded-xl w-full h-full object-cover"
         />
       </div>
