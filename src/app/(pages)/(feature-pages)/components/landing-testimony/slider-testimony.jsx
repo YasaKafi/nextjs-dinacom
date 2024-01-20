@@ -12,46 +12,72 @@ import {useRef, useState} from "react";
 function SliderTestimony() {
     const data = [
         {
-            id: 1,
-            name: 'Viezh Robert',
-            place: 'Warsaw, Poland',
-            description: 'Saya Sangat Senang',
-            image: userTestimony,
-            rating: '4,5'
+          id: 1,
+          name: 'Viezh Robert',
+          place: 'Jakarta, Indonesia',
+          description: 'Saya Sangat Senang dengan website pelatihan kerja ini. Materi-materinya sangat informatif dan membantu saya dalam mencari pekerjaan. Terima kasih!',
+          image: 'https://pikwizard.com/pw/small/39573f81d4d58261e5e1ed8f1ff890f6.jpg',
+          rating: 4.5
         },
         {
-            id: 2,
-            name: 'Yessica Christy',
-            place: 'Shanxi, China',
-            description: 'Saya Sangat Senang',
-            image: userTestimony,
-            rating: '4,5'
+          id: 2,
+          name: 'John Doe',
+          place: 'Surabaya, Indonesia',
+          description: 'Website pelatihan kerja ini benar-benar luar biasa! Saya mendapatkan banyak wawasan baru dan keterampilan yang berguna. Saya merekomendasikannya kepada semua orang yang sedang mencari pekerjaan atau ingin meningkatkan kemampuan mereka.',
+          image: 'https://images.unsplash.com/photo-1506277886164-e25aa3f4ef7f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fGZha2UlMjBwcm9maWxlfGVufDB8fDB8fHww',
+          rating: 5
         },
         {
-            id: 3,
-            name: 'Kim Young Jou',
-            place: 'Seoul, South Korea',
-            description: 'Saya Sangat Senang',
-            image: userTestimony,
-            rating: '4,5'
+          id: 3,
+          name: 'Maria Rodriguez',
+          place: 'Bandung, Indonesia',
+          description: 'Sangat terkesan dengan kualitas materi dan instruktur di website ini. Semua materi disajikan dengan baik dan mudah dipahami. Saya berhasil mendapatkan pekerjaan impian saya setelah mengikuti pelatihan di sini!',
+          image: 'https://images.unsplash.com/photo-1609132718484-cc90df3417f8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZmFrZSUyMHdvbWFufGVufDB8fDB8fHww',
+          rating: 4
         },
         {
-            id: 4,
-            name: 'Kim Young Jou',
-            place: 'Seoul, South Korea',
-            description: 'Saya Sangat Senang',
-            image: userTestimony,
-            rating: '4,5'
+          id: 4,
+          name: 'Ayu Pratiwi',
+          place: 'Semarang, Indonesia',
+          description: 'Pelatihan kerja ini sangat membantu saya memahami tren pasar kerja saat ini. Materi yang disajikan sangat relevan dan up-to-date. Terima kasih kepada tim di balik website ini!',
+          image: 'https://images.unsplash.com/photo-1599842057874-37393e9342df?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZmFrZSUyMHdvbWFufGVufDB8fDB8fHww',
+          rating: 4.8
         },
         {
-            id: 5,
-            name: 'Kim Young Jou',
-            place: 'Seoul, South Korea',
-            description: 'Saya Sangat Senang',
-            image: userTestimony,
-            rating: '4,5'
+          id: 5,
+          name: 'Michael Smith',
+          place: 'Yogyakarta, Indonesia',
+          description: 'Website pelatihan kerja ini memberikan pandangan baru terhadap dunia pekerjaan. Saya mendapatkan banyak pengetahuan baru dan dapat mengaplikasikannya langsung dalam pekerjaan saya. Bravo!',
+          image: 'https://images.unsplash.com/photo-1463453091185-61582044d556?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+          rating: 4.2
         },
-    ]
+        {
+          id: 6,
+          name: 'Siti Rahmaniah',
+          place: 'Medan, Indonesia',
+          description: 'Sangat puas dengan pengalaman pelatihan di website ini. Instruktur sangat berpengalaman dan responsif terhadap pertanyaan peserta. Materi pelatihan sangat bermanfaat.',
+          image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+          rating: 4.6
+        },
+        {
+          id: 7,
+          name: 'Alexandra Lopez',
+          place: 'Makassar, Indonesia',
+          description: 'Pelatihan di website ini membuka peluang baru bagi saya. Saya mendapatkan wawasan mendalam tentang industri saya dan meningkatkan kemampuan saya secara signifikan.',
+          image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZmFrZSUyMHByb2ZpbGV8ZW58MHx8MHx8fDA%3D',
+          rating: 4.7
+        },
+        {
+          id: 8,
+          name: 'Ahmad Rahman',
+          place: 'Palembang, Indonesia',
+          description: 'Website pelatihan kerja ini benar-benar membantu saya mengembangkan keterampilan dan pengetahuan saya. Saya merekomendasikannya kepada teman-teman saya yang sedang mencari peluang pendidikan dan pekerjaan.',
+          image: 'https://images.unsplash.com/photo-1499996860823-5214fcc65f8f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGZha2UlMjBwcm9maWxlfGVufDB8fDB8fHww',
+          rating: 4.3
+        }
+      ];
+      
+      
     const sliderRef = useRef(null);
     const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -111,7 +137,7 @@ function SliderTestimony() {
                                 <div className="w-full flex justify-between ">
 
                                     <div className="flex gap-3 lg:gap-7 items-center">
-                                        <Image className="w-[50px] h-[50px]" src={item.image} alt="User Testimony" width={50} height={50}/>
+                                        <Image className="w-[50px] h-[50px] rounded-full object-cover" src={item.image} alt="User Testimony" width={50} height={50}/>
                                         <div>
                                             <h1 className="font-medium text-sm lg:text-base">{item.name}</h1>
                                             <p className="text-[#4F5665] text-xs">{item.place}</p>

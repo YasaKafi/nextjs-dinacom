@@ -1,104 +1,122 @@
+"use client";
+
+import { useState } from "react";
 import { Tab } from "@headlessui/react";
 import Image from "next/image";
 import {
-  coursesWork,
-  decorationBottom,
-  decorationBox,
-  emptyDataIlustrationTraining,
+    coursesWork,
+    decorationBottom,
+    decorationBox,
+    emptyDataIlustrationTraining,
 } from "@/app/lib/utils/images";
 import TrainingCard from "./components/card-training";
-import userCourse from "@/app/lib/services/endpoint/user/user-course";
-import userInternship from "@/app/lib/services/endpoint/user/user-internship";
 
+function classNames(...classes) {
+    return classes.filter(Boolean).join(" ");
+}
 
+export default function Example() {
+    let [categories] = useState({
+        "Pelatihan yang sedang berlangsung": [
+            {
+                id: 1,
+                title: "Mastering React EXPERT",
+                imageUrl: "https://nareshit.com/wp-content/uploads/2019/01/ReactJS-online-training-nareshit.jpg",
+                presentase: 0,
+            },
+            // {
+            //     id: 2,
+            //     title: "Soft Skill - Memulai Karir menggunakan Design Thinking",
+            //     imageUrl: coursesWork,
+            //     presentase: 30,
+            // },
+            // {
+            //     id: 3,
+            //     title: "Soft Skill - Kerja Sama Tim dan Manajemen Harapan",
+            //     imageUrl: coursesWork,
+            //     presentase: 80,
+            // },
+            // {
+            //     id: 4,
+            //     title: "Prinsip Desain Visual: Menciptakan Grafik yang Menarik",
+            //     imageUrl: coursesWork,
+            //     presentase: 50,
+            // },
+        ],
+        "Pelatihan yang sudah selesai": [
+            // {
+            //     id: 1,
+            //     title: "Menavigasi Tren Media Sosial: Tetap Relevan di Era Digital",
+            //     imageUrl: coursesWork,
+            //     presentase: 100,
+            // },
+            // {
+            //     id: 2,
+            //     title: "Soft Skill - Memulai Karir menggunakan Design Thinking",
+            //     imageUrl: coursesWork,
+            //     presentase: 100,
+            // },
+        ],
+    });
 
+    return (
+        <div className="w-full px-6 py-6 lg:px-12 lg:py-12 h-full ">
+            <Tab.Group>
+                <Tab.List className="lg:w-[70%] w-full flex flex-col lg:flex-row rounded-xl  p-1 ">
+                    {Object.keys(categories).map((category, index) => (
+                        <Tab
+                            key={category}
+                            className={({ selected }) =>
+                                classNames(
+                                    "w-full rounded-2xl py-2.5 text-sm font-medium",
+                                    "ring-white/60  focus:outline-none focus:ring-2",
+                                    selected
+                                        ? "bg-primary bg-opacity-25 text-textPrimary"
+                                        : "text-blue hover:bg-gray-200 hover:text-black",
+                                    index !== Object.keys(categories).length - 1 && "mr-12"
+                                )
+                            }
+                        >
+                            {category}
+                        </Tab>
+                    ))}
+                </Tab.List>
 
-export default async function Page() {
-
-  // const [dataUserCourse, setDataUserCourse]  = useState()
-
-  // useEffect(() => {
-  //   async function fetchDataUserCourse() {
-  //     try {
-  //       const fetchedDataUserCourse = await userCourse(1);
-  //       setDataUserCourse(fetchedDataUserCourse);
-  //       console.log("FETCHED DATA USER COURSE")
-  //       console.log(dataUserCourse)
-  //     } catch (error) {
-  //       console.error('Error fetching user course data:', error);
-  //
-  //     }
-  //   }
-  //
-  //   fetchDataUserCourse();
-  //
-  // }, []);
-
-
-  // const categories = [
-  //   "Pelatihan yang sedang berlangsung",
-  //   "Pelatihan yang sudah selesai"
-  // ]
-
-
-  return (
-    <div className="w-full px-6 py-6 lg:px-12 lg:py-12 h-full ">
-      {/*<Tab.Group>*/}
-      {/*  <Tab.List className="lg:w-[70%] w-full flex flex-col lg:flex-row rounded-xl  p-1 ">*/}
-      {/*      {categories.map((category, index) => (*/}
-      {/*          <Tab*/}
-      {/*              className={({ selected }) =>*/}
-      {/*                  classNames(*/}
-      {/*                      "w-full rounded-2xl py-2.5 text-sm font-medium",*/}
-      {/*                      "ring-white/60  focus:outline-none focus:ring-2",*/}
-      {/*                      selected*/}
-      {/*                        ? "bg-primary bg-opacity-25 text-textPrimary"*/}
-      {/*                        : "text-blue hover:bg-gray-200 hover:text-black",*/}
-      {/*                      index !== Object.keys(category).length - 1 && "mr-12"*/}
-      {/*                  )*/}
-      {/*              }*/}
-      {/*          >*/}
-      {/*            {categories[index]}*/}
-      {/*          </Tab>*/}
-      {/*      ))}*/}
-
-      {/*  </Tab.List>*/}
-
-      {/*  /!*<Tab.Panels className="pt-8 w-full h-[95%]">*!/*/}
-      {/*  /!*  {Object.values(categories).map((posts, idx) => (*!/*/}
-      {/*  /!*    <Tab.Panel*!/*/}
-      {/*  /!*      key={idx}*!/*/}
-      {/*  /!*      className={classNames(*!/*/}
-      {/*  /!*        "rounded-xl  p-3 w-full h-full",*!/*/}
-
-      {/*  /!*      )}*!/*/}
-      {/*  /!*    >*!/*/}
-      {/*  /!*      {posts.length === 0 && (*!/*/}
-      {/*  /!*        <div className="flex flex-col w-full items-center justify-center h-full ">*!/*/}
-      {/*  /!*          <Image src={emptyDataIlustrationTraining} alt="" />*!/*/}
-      {/*  /!*          <h2 className="text-xl font-medium text-gray-500 w-1/2 text-center">*!/*/}
-      {/*  /!*            Tidak ada pelatihan saat ini, Ayo temukan peluang baru dan*!/*/}
-      {/*  /!*            tingkatkan skill anda sekarang*!/*/}
-      {/*  /!*            <span className="text-primary"> disini</span>*!/*/}
-      {/*  /!*          </h2>*!/*/}
-      {/*  /!*        </div>*!/*/}
-      {/*  /!*      )}*!/*/}
-      {/*  /!*      {posts.length > 0 && (*!/*/}
-      {/*  /!*        <div className="h-full grid grid-cols-2 grid-rows-3 gap-6 overflow-auto ">*!/*/}
-      {/*  /!*          {posts.map((post) => (*!/*/}
-      {/*  /!*            <TrainingCard*!/*/}
-      {/*  /!*            key={post.id}*!/*/}
-      {/*  /!*            post={post}*!/*/}
-      {/*  /!*            decorationBox={decorationBox}*!/*/}
-      {/*  /!*            decorationBottom={decorationBottom}*!/*/}
-      {/*  /!*          />*!/*/}
-      {/*  /!*          ))}*!/*/}
-      {/*  /!*        </div>*!/*/}
-      {/*  /!*      )}*!/*/}
-      {/*  /!*    </Tab.Panel>*!/*/}
-      {/*  /!*  ))}*!/*/}
-      {/*  /!*</Tab.Panels>*!/*/}
-      {/*</Tab.Group>*/}
-    </div>
-  );
+                <Tab.Panels className="pt-8 w-full h-[95%]">
+                    {Object.values(categories).map((posts, idx) => (
+                        <Tab.Panel
+                            key={idx}
+                            className={classNames(
+                                "rounded-xl  p-3 w-full h-full",
+                                "ring-white/60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2"
+                            )}
+                        >
+                            {posts.length === 0 && (
+                                <div className="flex flex-col w-full items-center justify-center h-full ">
+                                    <Image src={emptyDataIlustrationTraining} alt="" />
+                                    <h2 className="text-xl font-medium text-gray-500 w-1/2 text-center">
+                                        Tidak ada pelatihan saat ini, Ayo temukan peluang baru dan
+                                        tingkatkan skill anda sekarang
+                                        <span className="text-primary"> disini</span>
+                                    </h2>
+                                </div>
+                            )}
+                            {posts.length > 0 && (
+                                <div className="h-full grid grid-cols-2 grid-rows-3 gap-6 overflow-auto ">
+                                    {posts.map((post) => (
+                                        <TrainingCard
+                                            key={post.id}
+                                            post={post}
+                                            decorationBox={decorationBox}
+                                            decorationBottom={decorationBottom}
+                                        />
+                                    ))}
+                                </div>
+                            )}
+                        </Tab.Panel>
+                    ))}
+                </Tab.Panels>
+            </Tab.Group>
+        </div>
+    );
 }
