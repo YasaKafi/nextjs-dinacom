@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/dinacom.iml" filepath="$PROJECT_DIR$/.idea/dinacom.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../React/dinacom-dashboard-admin/.idea/dinacom-dashboard-admin.iml" filepath="$PROJECT_DIR$/../../React/dinacom-dashboard-admin/.idea/dinacom-dashboard-admin.iml" />
     </modules>
   </component>
 </project>

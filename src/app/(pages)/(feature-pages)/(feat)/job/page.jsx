@@ -20,6 +20,7 @@ export default async function JobPage({searchParams}) {
 
     const listJob = await job(search)
 
+
     if(search === "" && sortBy === "" && jobType === "" && position === "") {
         return (
             <div className=" w-screen">

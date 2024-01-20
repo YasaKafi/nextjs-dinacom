@@ -1,6 +1,7 @@
 import React from 'react';
 import {FaCircle} from "react-icons/fa";
 import EastRoundedIcon from "@mui/icons-material/EastRounded";
+import Button from "@/app/(pages)/(feature-pages)/(feat)/internship/detail/[id]/components/button";
 
 function InternshipDescription({data}) {
     const features = [
@@ -23,6 +24,8 @@ function InternshipDescription({data}) {
                 <p className="text-[#404040] text-[16px]">
                     {data.description}
                 </p>
+
+                <Button id={data.id}/>
             </div>
         </div>
     );

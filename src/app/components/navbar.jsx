@@ -13,7 +13,7 @@ import React from "react";
 function Navbar() {
     // const { data: session } = useSession();
     // console.log(session?.user?.access_token);
-    // const sessionExist = session?.user?.access_token !== undefined;
+    const sessionExist = true;
     // console.log("Login Status:")
     // console.log(sessionExist)
 
@@ -55,16 +55,16 @@ function Navbar() {
 
             <NavbarMobileBtn/>
 
-            {/* {sessionExist ? <div className="hidden lg:gap-3 lg:flex lg:items-center">
+             {sessionExist ? <div className="hidden lg:gap-3 lg:flex lg:items-center">
                 <Link href={"/dashboard/training"}>
                     <button className="px-[30px] py-[10px] text-white bg-primary rounded-xl">
                         Dashboard
                     </button>
                 </Link>
 
-                <Image onClick={signOut} className="w-[60px] h-[60px] cursor-pointer" src={avatarUser} width={100} height={100} />
+                {/*<MenuProfile/>*/}
 
-            <MenuProfile/>
+
 
 
             </div> : <div className="hidden lg:gap-3 lg:flex">
@@ -79,7 +79,7 @@ function Navbar() {
                     </button>
                 </Link>
 
-            </div>} */}
+            </div>}
         </div>
     );
 }

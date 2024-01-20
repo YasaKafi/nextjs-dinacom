@@ -1,6 +1,7 @@
 import Image from "next/image";
 import {iconGoogle} from "@/app/lib/utils/svg";
 import Form from "@/app/(pages)/(initial-pages)/components/form";
+import FormLayout from "@/app/(pages)/(initial-pages)/login/form-layout";
 
 export default  function LoginPage() {
     return (
@@ -23,7 +24,7 @@ export default  function LoginPage() {
             </div>
 
 
-            <div className="w-full h-full flex flex-col items-start justify-between py-[5vh] lg:py-20 lg:px-24 lg:w-1/2">
+            <div className="w-full h-full flex flex-col items-start justify-start py-[5vh] lg:py-20 lg:px-24 lg:w-1/2">
                 <Image
                     className=" items-end hidden lg:block"
                     src="/image/logo.png"
@@ -32,37 +33,7 @@ export default  function LoginPage() {
                     height={50}
                 />
 
-                <div className="w-full">
-
-                    <h1 className="text-black font-semibold text-2xl lg:text-[36px] mb-3">Masuk</h1>
-                    <h3 className="text-[#8D8D8D] font-light text-base mb-12">Selamat Datang Kembali!</h3>
-
-                    <div className="w-full flex flex-col gap-5 mb-5">
-                        <Form label="Email"/>
-                        <Form label="Password"/>
-                    </div>
-                </div>
-
-                <div className="w-full flex flex-col gap-5">
-
-                    <button  className="w-full bg-primary py-3 rounded-2xl text-white font-medium text-sm lg:text-lg">Masuk
-                    </button>
-
-                    <div className="w-full py-3">
-
-                        <button className="w-full border border-[#8D8D8D] py-3 rounded-2xl text-textPrimary font-medium text-sm flex justify-center lg:text-lg">
-                            <div className="flex">
-                                <Image className="me-4 " src={iconGoogle} alt="Icon Google" height={20} width={20}/>
-                                <h3 className="text-textPrimary text-sm lg:text-lg text-center">Masuk dengan Google</h3>
-                            </div>
-                        </button>
-                    </div>
-
-                    <div className="w-full flex gap-2 justify-center items-center">
-                        <h3 className="text-textPrimary text-xs">Tidak mempunyai akun?</h3>
-                        <h3 className="text-primary font-semibold text-sm">Daftar</h3>
-                    </div>
-                </div>
+                <FormLayout/>
             </div>
         </main>
     );
