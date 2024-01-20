@@ -62,9 +62,9 @@ function Navbar() {
                     </button>
                 </Link>
 
-                <Image onClick={signOut} className="w-[60px] h-[60px] cursor-pointer" src={avatarUser} width={100} height={100} />
+                <MenuProfile/>
 
-            <MenuProfile/>
+
 
 
             </div> : <div className="hidden lg:gap-3 lg:flex">
