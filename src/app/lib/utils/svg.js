@@ -35,7 +35,7 @@ import iconMasterCard from '@/app/lib/assets/svg/mastercard.svg'
 import iconDiscover from '@/app/lib/assets/svg/discover.svg'
 import iconVisa from '@/app/lib/assets/svg/visa.svg'
 import iconPremium from '@/app/lib/assets/svg/premium.svg'
-
+import premiumIcons from '@/app/lib/assets/svg/premiumIcons2.svg'
 export {
    iconGoogle,
    brainDecoration,
@@ -74,4 +74,5 @@ export {
    iconDiscover,
    iconVisa,
    iconPremium,
+   premiumIcons
 };

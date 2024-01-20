@@ -5,17 +5,17 @@ import {avatarUser, smarthomeLogo} from "@/app/lib/utils/images";
 import NavbarMobileBtn from "@/app/components/navbar-mobile-btn";
 import Link from "next/link";
 import React from "react";
-import {signIn, signOut, useSession} from "next-auth/react";
-import {useRouter} from "next/navigation";
-import MenuProfile from "./menu-profile";
-import logout from "../lib/services/endpoint/auth/logout";
+// import {signIn, signOut, useSession} from "next-auth/react";
+// import {useRouter} from "next/navigation";
+// import MenuProfile from "./menu-profile";
+// import logout from "../lib/services/endpoint/auth/logout";
 
 function Navbar() {
-    const { data: session } = useSession();
-    console.log(session?.user?.access_token);
-    const sessionExist = session?.user?.access_token !== undefined;
-    console.log("Login Status:")
-    console.log(sessionExist)
+    // const { data: session } = useSession();
+    // console.log(session?.user?.access_token);
+    // const sessionExist = session?.user?.access_token !== undefined;
+    // console.log("Login Status:")
+    // console.log(sessionExist)
 
 
 
@@ -55,7 +55,7 @@ function Navbar() {
 
             <NavbarMobileBtn/>
 
-            {sessionExist ? <div className="hidden lg:gap-3 lg:flex lg:items-center">
+            {/* {sessionExist ? <div className="hidden lg:gap-3 lg:flex lg:items-center">
                 <Link href={"/dashboard/training"}>
                     <button className="px-[30px] py-[10px] text-white bg-primary rounded-xl">
                         Dashboard
@@ -79,7 +79,7 @@ function Navbar() {
                     </button>
                 </Link>
 
-            </div>}
+            </div>} */}
         </div>
     );
 }
