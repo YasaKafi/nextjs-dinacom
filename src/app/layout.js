@@ -1,6 +1,6 @@
 import { Montserrat } from 'next/font/google'
 import './globals.css'
-import Provider from "./Provider";
+// import Provider from "./Provider";
 
 const montserrat = Montserrat({ subsets: ['latin'] })
 
@@ -13,9 +13,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={montserrat.className}>
-      <Provider>
           {children}
-      </Provider>
       </body>
     </html>
   )
